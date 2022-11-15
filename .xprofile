@@ -10,4 +10,4 @@
 # xrandr --addmode eDP1 800x1280_60.00
 # xrandr --addmode eDP1 1080x1920_60.00
 
-onboard &
+# onboard &

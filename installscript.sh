@@ -45,7 +45,7 @@ tlp-rdw
 #systemctl --user enable pulseaudio pulseaudio.socket
 
 # Install personal packages
-yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-mod aircrack-ng bully reaver tmux libreoffice-still metasploit cowpatty wireshark-qt termshark macchanger pixiewps john android-sdk-platform-tools nerd-fonts-jetbrains-mono krita xorg-fonts gucharmap qbittorrent rustscan cpupower-gui wine-staging bottom vlc tldr lutris fcitx5 fcitx5-gtk fcitx5-qt fcitx5-unikey kcm-fcitx5 btop clipmenu gparted pass pass-otp sxiv scrcpy qutebrowser trash-cli kdeconnect zathura zathura-pdf-mupdf easytag gnome-power-manager yt-dlp gthumb qalculate-gtk galculator hashcat shotwell kate bettercap pyenv zaproxy audacious rofi qt5ct gnome-themes-extra adwaita-qt5 adwaita-qt6 cpupower
+yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-mod aircrack-ng bully reaver tmux libreoffice-still metasploit cowpatty wireshark-qt termshark macchanger pixiewps john android-sdk-platform-tools nerd-fonts-jetbrains-mono krita xorg-fonts gucharmap qbittorrent rustscan cpupower-gui wine-staging bottom vlc tldr lutris fcitx5 fcitx5-gtk fcitx5-qt fcitx5-unikey kcm-fcitx5 btop clipmenu gparted pass pass-otp sxiv scrcpy qutebrowser trash-cli kdeconnect zathura zathura-pdf-mupdf easytag gnome-power-manager yt-dlp gthumb qalculate-gtk galculator hashcat shotwell kate bettercap pyenv zaproxy audacious rofi qt5ct gnome-themes-extra adwaita-qt5 adwaita-qt6 cpupower lmms
 
 
 # Install AUR packages

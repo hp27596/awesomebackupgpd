@@ -286,9 +286,9 @@
       ;; doom-big-font (font-spec :family "Comic Code Ligatures" :size 35)
       ;; doom-variable-pitch-font (font-spec :family "Comic Code Ligatures" :size 27))
 
-(setq doom-font (font-spec :family "Source Code Pro" :size 24)
-      doom-big-font (font-spec :family "Source Code Pro" :size 35)
-      doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 20))
+(setq doom-font (font-spec :family "Source Code Pro" :size 18)
+      doom-big-font (font-spec :family "Source Code Pro" :size 24)
+      doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 15))
 
 ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
 ;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
