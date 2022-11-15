@@ -1,0 +1,12 @@
+fset flac=filename="*.flac"
+set status_display_program=/usr/local/bin/cmus-notify
+set status_display_program=/usr/bin/cmus-notify
+set status_display_program=/usr/bin/cmus_notify
+set status_display_program=
+q
+add /mnt/SDcard/Nextcloud/Music
+factivate flac
+factivate
+fset flac=filename=".flac"
+fset flac filename=".flac"
+fset filename=".flac"

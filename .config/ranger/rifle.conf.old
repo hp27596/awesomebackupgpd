@@ -1,0 +1,4 @@
+ext png|jpg|jpeg = feh --auto-zoom "$@"
+ext txt|md|conf|vim|cfg = nvim "$@"
+ext avi|m4v|mp4|mov|wma|mkv = mpv "$@"
+
