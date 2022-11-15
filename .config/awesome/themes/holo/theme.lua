@@ -281,7 +281,7 @@ cmus_widget:connect_signal("button::press", function() awful.spawn.with_shell('c
 local mylauncher = awful.widget.button({ image = theme.awesome_icon_launcher, layout = wibox.layout.fixed.horizontal() })
 mylauncher = wibox.container.margin(mylauncher, dpi(5), dpi(5), dpi(5), dpi(5))
 mylauncher = wibox.container.background(mylauncher, theme.bg_focus, gears.shape.rectangle)
-mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('panther_launcher') end )
+mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('xfce4-appfinder') end )
 
 local lockbutton = awful.widget.button({ image = theme.powerw })
 lockbutton = wibox.container.margin(lockbutton, dpi(0), dpi(8), dpi(8), dpi(8))
@@ -376,7 +376,7 @@ function theme.at_screen_connect(s)
     -- Create systray
     s.systray = wibox.widget.systray()
     s.systray:set_horizontal(false)
-    s.systray:set_base_size(35)
+    s.systray:set_base_size(25)
     s.systray = wibox.container.background(s.systray, theme.bg_normal, gears.shape.rectangle)
     s.systraycont = wibox.container.margin(s.systray, dpi(4), dpi(0), dpi(2), dpi(0))
 
@@ -392,7 +392,7 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.vertical,
             s.systraycont,
             -- onboard,
-            rot_widgetcont,
+            -- rot_widgetcont,
             s.mylayoutbox,
         },
     }
@@ -425,8 +425,8 @@ function theme.at_screen_connect(s)
             vertbar,
             -- clock_icon,
             clockwidget,
-            vertbar,
-            cmus_widget,
+            -- vertbar,
+            -- cmus_widget,
             vertbar,
             caffeine_widget,
             vertbar,

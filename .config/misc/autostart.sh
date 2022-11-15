@@ -8,15 +8,16 @@ function run {
 }
 
 # tint2 &
+xcalib ~/.config/misc/LT7911D.icm &
 
 #starting utility applications at boot time
 # xautolock -time 10 -locker 'slock' -detectsleep -killtime 12 -killer "systemctl suspend" &
-xidlehook --not-when-fullscreen --not-when-audio --timer 600 'gnome-screensaver-command -l' '' --timer 900 'systemctl suspend' '' --socket "/tmp/xidlehook.sock" &
+xidlehook --not-when-fullscreen --not-when-audio --timer 600 'slock' '' --timer 900 'systemctl suspend' '' --socket "/tmp/xidlehook.sock" &
 
 \emacs --daemon &
 nextcloud &
 fcitx5 &
-gnome-screensaver &
+# gnome-screensaver &
 blueman-applet &
 # caffeine &
 picom --config ~/.config/picom/picom.conf --experimental-backends &
@@ -33,6 +34,7 @@ nm-applet &
 sleep 2
 alacritty &
 run google-chrome-stable &
+run steam &
 
 tmux kill-server &
 sleep 1

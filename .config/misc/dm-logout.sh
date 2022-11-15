@@ -6,7 +6,7 @@
 # - dmenu
 # - systemd
 
-chosen=$(echo -e "... [Cancel]\n0. Screen Off\n1. Logout\n2. Shutdown\n3. Reboot\n4. Suspend\n5. Lockscreen\n6. Hibernate" | dmenu -i -l 10 -h 80 -p "Choose Action:")
+chosen=$(echo -e "... [Cancel]\n0. Screen Off\n1. Logout\n2. Shutdown\n3. Reboot\n4. Suspend\n5. Lockscreen\n6. Hibernate" | dmenu -i -l 10 -h 20 -p "Choose Action:")
 if [[ $chosen = "0. Screen Off" ]]; then
 	xset dpms force off
 elif [[ $chosen = "4. Suspend" ]]; then

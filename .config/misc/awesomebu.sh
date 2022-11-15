@@ -1,4 +1,4 @@
-cd ~/awesomebackupsf
+cd ~/awesomebackupgpd
 sh backup.sh
 cd ~/
 

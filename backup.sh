@@ -19,7 +19,7 @@ if [[ $(ls -a | grep .config) == '' ]]; then
   mkdir .config
 fi
 
-rsync -Pra --delete ~/.config/{awesome,misc,alacritty,bottom,btop,cpupower_gui,cmus,dunst,fcitx5,feh,'gtk-2.0','gtk-3.0',mpv,nvim,picom,ranger,rofi,dmenu-frecency,zathura,touchegg,chrome-flags.conf} $HOME/awesomebackupsf/.config
+rsync -Pra --delete ~/.config/{awesome,misc,alacritty,bottom,btop,cpupower_gui,cmus,dunst,fcitx5,feh,'gtk-2.0','gtk-3.0',mpv,nvim,picom,ranger,rofi,dmenu-frecency,zathura,touchegg,chrome-flags.conf} $HOME/awesomebackupgpd/.config
 
 cp -r ~/.doom.d/ $HOME/awesomebackupgpd/
 # cp -r ~/.fonts/ $HOME/awesomebackupsf/
