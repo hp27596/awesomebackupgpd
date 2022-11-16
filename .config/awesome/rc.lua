@@ -299,6 +299,11 @@ globalkeys = my_table.join(
     awful.key({ modkey,         }, "Left", function () awful.client.focus.byidx(-1) end,
         {description = "Focus previous by index", group = "client"}),
 
+    awful.key({ modkey,         }, "Tab", function () awful.client.focus.byidx( 1) end,
+        {description = "Focus next by index", group = "client"}),
+    awful.key({ modkey, "Shift" }, "Tab", function () awful.client.focus.byidx(-1) end,
+        {description = "Focus previous by index", group = "client"}),
+
     -- Non-empty tag browsing CTRL+TAB (CTRL+SHIFT+TAB)
     -- awful.key({ altkey }, "Tab", function () lain.util.tag_view_nonempty(-1) end,
     --           {description = "view  previous nonempty", group = "tag"}),

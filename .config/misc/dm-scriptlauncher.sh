@@ -6,6 +6,7 @@
 declare -a options=(
     # "Touchpad Toggle - touchpadtoggle.sh"
     "Set Cpu Profile - dm-cpu.sh"
+    "Dmenu Package Manager - dm-packageinstall.sh"
     "Connect to Sony XM4 bluetooth headphone - sonyxm4.sh"
     "Restart Emacs - resemacs.sh"
     "Restart Nextcloud Daemon - restartnextcloud.sh"

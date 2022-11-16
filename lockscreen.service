@@ -1,0 +1,13 @@
+[Unit]
+Description=Lock the screen with i3lock
+Before=suspend.target
+
+[Service]
+User=hp
+Type=forking
+Environment=DISPLAY=:0
+ExecStartPre=sh -c "/usr/bin/killall caffeinate || true"
+ExecStart=/usr/local/bin/slock &
+
+[Install]
+WantedBy=suspend.target
