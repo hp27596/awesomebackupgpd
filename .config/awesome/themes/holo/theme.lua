@@ -410,6 +410,7 @@ function theme.at_screen_connect(s)
         tasks(s), -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            vertbar,
             temp,
             vertbar,
             brightness_widget,
