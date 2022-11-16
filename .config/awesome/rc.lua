@@ -282,9 +282,16 @@ globalkeys = my_table.join(
         {description = "Capture Part of Screen", group = "hotkeys"}),
 
     -- Caffeinate
-    awful.key({ modkey, "Shift" }, "i",
+    awful.key({ modkey, "Shift" }, "e",
         function ()
             awful.spawn.with_shell("~/.config/awesome/caffe_toggle.sh")
+        end,
+        {description = "Toggle Caffeinate", group = "hotkeys"} ),
+
+    -- Dmenu Package Installer
+    awful.key({ modkey, "Shift" }, "i",
+        function ()
+            awful.spawn.with_shell("~/.config/misc/dm-packageinstall.sh")
         end,
         {description = "Toggle Caffeinate", group = "hotkeys"} ),
 

@@ -8,7 +8,7 @@ if [[ $action == *"1"* ]]; then
     if [ $choice ]; then
         alacritty --hold -e sh -c "yay -Syu $choice && $SHELL"
     fi
-else
+elif [[ $action == *"2"* ]]; then
     notify-send "Listing All User Installed Packages"
     sleep 1
     choice=$(yay -Qqe | dmenu -i -l 20 -p 'Choose package:')

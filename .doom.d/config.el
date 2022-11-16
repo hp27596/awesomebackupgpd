@@ -181,7 +181,7 @@
 (add-hook 'org-mode-hook #'visual-fill-column-mode)
 (global-visual-fill-column-mode t)
 (setq-default visual-fill-column-center-text t)
-(setq-default fill-column 100)
+(setq-default fill-column 85) ;; 80 char in a line is a popular unix convention, so this is both asthetic and practicality
 ;; beacon scrolling
 (beacon-mode 1)
 ;; buffer scroll bar on the right for easier navigation and knowing where in the document the cursor is
