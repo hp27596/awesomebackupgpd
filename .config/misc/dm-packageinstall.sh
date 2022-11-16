@@ -6,6 +6,7 @@ if [[ $action == *"1"* ]]; then
     choice=$(yay -Slq | dmenu -i -l 20 -p 'Choose package:')
 
     if [ $choice ]; then
+        notify-send "Updating system and installing package $choice"
         alacritty --hold -e sh -c "yay -Syu $choice && $SHELL"
     fi
 elif [[ $action == *"2"* ]]; then
@@ -14,6 +15,7 @@ elif [[ $action == *"2"* ]]; then
     choice=$(yay -Qqe | dmenu -i -l 20 -p 'Choose package:')
 
     if [ $choice ]; then
+        notify-send "Uninstalling package $choice"
         alacritty --hold -e sh -c "yay -Rns $choice ; $SHELL"
     fi
 

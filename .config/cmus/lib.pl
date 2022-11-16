@@ -240,7 +240,6 @@
 /home/hp/Music/FLACs/08.-Television Rules The Nation.flac
 /home/hp/Music/FLACs/09.-Technologic.flac
 /home/hp/Music/FLACs/03.-The Son Of Flynn.flac
-/home/hp/Music/FLACs/18.-C.L.U.flac
 /home/hp/Music/FLACs/21.-Tron Legacy (End Titles).flac
 /home/hp/Music/FLACs/03.-Giorgio By Moroder.flac
 /home/hp/Music/FLACs/07.-Touch.flac
