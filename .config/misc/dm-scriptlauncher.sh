@@ -4,9 +4,9 @@
 
 # declare scripts description and location
 declare -a options=(
-    "Connect to Sony XM4 bluetooth headphone - sonyxm4.sh"
     # "Touchpad Toggle - touchpadtoggle.sh"
     "Set Cpu Profile - dm-cpu.sh"
+    "Connect to Sony XM4 bluetooth headphone - sonyxm4.sh"
     "Restart Emacs - resemacs.sh"
     "Restart Nextcloud Daemon - restartnextcloud.sh"
     "Backup Awesome Dotfiles (Term) - awesomebu.sh"
@@ -24,8 +24,8 @@ declare -a options=(
     # "Backup Qtile Dotfiles (Term) - qtilebu.sh"
     "Open Password Manager - dm-passmenu.sh"
     "Open Clean Disk Utility (Term) - ncdu"
-    "Refresh App Launcher Cache - dm-frecency-flush.sh"
-    "Open Dotfiles Chooser - dm-opendot.sh"
+    # "Refresh App Launcher Cache - dm-frecency-flush.sh"
+    "Open Dotfiles Editor Picker - dm-opendot.sh"
 )
 
 # script folder path

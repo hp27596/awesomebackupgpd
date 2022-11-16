@@ -265,7 +265,7 @@ local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widge
 -- volume_widget = wibox.container.background(volume_widget, theme.bg_focus, gears.shape.rectangle)
 
 -- Backlight
-local brightness_widget = require('awesome-wm-widgets.brightness-widget.brightness') { type = 'icon_and_text', program = 'brightnessctl', base = 70, tooltip = true, percentage = true, timeout = 100, step = 5 }
+local brightness_widget = require('awesome-wm-widgets.brightness-widget.brightness') { type = 'icon_and_text', program = 'brightnessctl', base = 65, tooltip = true, percentage = true, timeout = 100, step = 5 }
 
 -- Cmus
 -- local cmus_widget = require('awesome-wm-widgets.cmus-widget.cmus') { space = 5, timeout = 5 }

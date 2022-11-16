@@ -147,6 +147,7 @@ alias rm='echo "Did you mean trash-put(tp)?. Try \\\rm if you really want to use
 alias tp='trash-put'
 alias mkd='mkdir -pv'
 alias chx='sudo chmod +x'
+alias cp='cp -r'
 
 # ext aliases
 alias resemacs='killall emacs && \emacs --daemon && nohup emacsclient -c >&/dev/null &'

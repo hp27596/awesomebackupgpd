@@ -28,4 +28,4 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
 VISUAL=/usr/bin/nvim
 EDITOR=/usr/bin/nvim
-MANGOHUD=1
+# MANGOHUD=1
