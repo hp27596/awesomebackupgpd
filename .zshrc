@@ -135,7 +135,7 @@ SAVEHIST=10000
 alias sudo='sudo ' #use aliases with sudo
 alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
-alias lah='ls -lah'
+alias ll='ls -lah'
 alias vim='nvim'
 alias cls='clear'
 alias mv='mv -i'

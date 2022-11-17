@@ -20,7 +20,7 @@ fcitx5 &
 # gnome-screensaver &
 blueman-applet &
 # caffeine &
-picom --config ~/.config/picom/picom.conf --experimental-backends &
+picom --config ~/.config/picom/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # dunst &
 clipmenud &
@@ -34,13 +34,13 @@ nm-applet &
 sleep 2
 alacritty &
 run google-chrome-stable &
-run steam &
+# run steam &
 
 tmux kill-server &
 sleep 1
 alacritty -t tmux -e tmux &
 
-sh ~/.config/qtile/scripts/batterynotification.sh &
+# sh ~/.config/qtile/scripts/batterynotification.sh &
 
 # python ~/pyscripts/nucleartoast.py &
 

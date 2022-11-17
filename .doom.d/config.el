@@ -2,8 +2,8 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-;; (run-at-time (current-time) 600 'recentf-save-list)
-;; (run-at-time (current-time) 600 'bookmark-save)
+(run-at-time (current-time) 600 'recentf-save-list)
+(run-at-time (current-time) 600 'bookmark-save)
 
 ;; Better syntax highlighting with tree sitter
 (use-package! tree-sitter

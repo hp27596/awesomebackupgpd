@@ -21,3 +21,8 @@ bind-key G end
 # f to follow links (like qutebrowser)
 unbind-key f
 bind-key f goto-url
+
+unbind-key d
+unbind-key u
+bind-key d pagedown
+bind-key u pageup
