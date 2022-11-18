@@ -85,7 +85,7 @@ local mediaplayer = "mpv"
 awful.util.terminal = terminal
 -- awful.util.tagnames = {"", "", "", "", "", "", "", "", ""}
 awful.util.tagnames = {}
-local names = {"", "", "", "", "", "", "", "", ""}
+local names = {"", "", "", "", "", "", "", "", ""}
 local l = awful.layout.suit  -- Just to save some typing: use an alias.
 local layouts = { l.tile, l.max, l.max, l.max, l.max,
     l.max, l.max, l.max, l.max }
@@ -598,10 +598,10 @@ awful.rules.rules = {
       properties = { tag = screen[1].tags[9] } },
 
     { rule_any = { class = { "Steam" } },
-      properties = { tag = screen[1].tags[5] } },
+      properties = { tag = screen[1].tags[8] } },
 
     { rule_any = { name = { "Steam" } },
-      properties = { tag = screen[1].tags[5] } },
+      properties = { tag = screen[1].tags[8] } },
 
     { rule = { name = "tmux" },
       properties = { tag = screen[1].tags[6] } },

@@ -155,9 +155,8 @@ alias wlg='nohup wl-gammactl -g' #wayland extended brightness
 alias xrandrbr='xrandr --output eDP1 --brightness' #set extended brightness
 alias emacs="~/.config/misc/emacs-launch.sh"
 alias yt="yt-dlp"
-# alias wifite='airmon-ng start wlp1s0 && sudo wifite $@ && sudo airmon-ng stop wlp1s0mon'
 
-hack() { sudo airmon-ng start wlp1s0 && sudo wifite --dict /home/hp/passlist/top10kvn.txt "$@" && sudo airmon-ng stop wlp1s0mon }
+hack() { sudo airmon-ng start wlp44s0 && sudo wifite --new-hs --dict /home/hp/wordlists/top1milvn.txt "$@" && sudo airmon-ng stop wlp44s0mon }
 
 cdl() { cd "$@" && ls; }
 

@@ -156,8 +156,8 @@
 ;; treemacs
 (+treemacs/toggle)
 (setq treemacs-sorting 'alphabetic-case-insensitive-desc)
-(setq treemacs-width 30)
-;; (treemacs-follow-mode)
+(setq treemacs-width 25)
+(treemacs-follow-mode)
 (treemacs-tag-follow-mode)
 (defun ide-mode ()(interactive)(+treemacs/toggle)(demap-toggle)(evil-window-next nil))
 (global-set-key (kbd "<f8>") 'ide-mode)
