@@ -356,13 +356,14 @@ function theme.at_screen_connect(s)
         },
         style = {
             -- shape = gears.shape.powerline,
+            bg_urgent = '#F70000',
             bg_focus = barcolor,
             font = 10,
             spacing = 28,
         },
     }
 
-    s.mytaglist = wibox.container.margin(s.mytaglist, dpi(2), dpi(0), dpi(5), dpi(10))
+    s.mytaglist = wibox.container.margin(s.mytaglist, dpi(2), dpi(0), dpi(5), dpi(5))
     s.mytag = wibox.container.background(s.mytaglist, theme.bg_focus, gears.shape.rectangle)
     -- s.mytag = wibox.container.margin(mytaglistcont, dpi(0), dpi(0), dpi(0), dpi(0))
 

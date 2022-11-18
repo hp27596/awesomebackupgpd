@@ -212,7 +212,7 @@ globalkeys = my_table.join(
     -- awful.key({ modkey, "Shift" }, "p",      hotkeys_popup.show_help,
     --     {description = "Show help", group="awesome"}),
 
-    awful.key({ modkey, "Shift" }, "p", function() awful.spawn.with_shell('cp=$(colorpicker --one-shot) && notify-send "Color:" "$cp" && ( echo -n "$cp" | grep -oE "[^ ]+$" | xclip -sel clip)') end,
+    awful.key({ modkey, "Shift" }, "p", function() awful.spawn.with_shell('cp=$(colorpicker --one-shot) && notify-send "Color:" "$cp" && ( echo -n "$cp" | grep -oE "[^ ]+$" | tr -d "\n" | xclip -sel clip)') end,
         {description = "Colorpicker", group = "awesome"}),
 
     awful.key({ modkey, "Shift" }, "w", function () awful.util.mymainmenu:show() end,
@@ -594,9 +594,6 @@ awful.rules.rules = {
     { rule = { class = "Emacs" },
       properties = { tag = screen[1].tags[2] } },
 
-    { rule = { class = "Virt-manager" },
-      properties = { tag = screen[1].tags[9] } },
-
     { rule_any = { class = { "Steam" } },
       properties = { tag = screen[1].tags[8] } },
 
@@ -609,8 +606,11 @@ awful.rules.rules = {
     { rule_any = { name = { "ranger", "btop" } },
       properties = { tag = screen[1].tags[7] } },
 
-    { rule_any = { class = { "Thunar", "qBittorrent" } },
-      properties = { tag = screen[1].tags[8] } },
+    { rule_any = { class = { "Thunar" } },
+      properties = { tag = screen[1].tags[7] } },
+
+    { rule_any = { class = { "qBittorrent", "Virt-manager" } },
+      properties = { tag = screen[1].tags[9] } },
 
     { rule_any = { class = { "vlc" } },
       properties = { tag = screen[1].tags[9] } },
@@ -737,10 +737,10 @@ end)
 -- end)
 
 -- Focus urgent clients automatically
-client.connect_signal("property::urgent", function(c)
-    c.minimized = false
-    c:jump_to()
-end)
+-- client.connect_signal("property::urgent", function(c)
+--     c.minimized = false
+--     c:jump_to()
+-- end)
 
 -- client.connect_signal("mouse::enter", function(c)
 --     c:emit_signal("request::activate", "mouse_enter", {raise = true})
