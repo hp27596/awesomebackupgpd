@@ -224,8 +224,8 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show combi -theme '~/.config/rofi/launchers/type-4/style-1.rasi'") end,
       {description = "Run Program Launcher", group = "hotkeys"}),
 
-    awful.key({ modkey }, "t", function () awful.spawn.with_shell("thunar") end,
-      {description = "Run Thunar File Manager", group = "hotkeys"}),
+    awful.key({ modkey }, "t", function () awful.spawn.with_shell("nemo") end,
+      {description = "Run File Manager", group = "hotkeys"}),
 
     awful.key({ modkey }, "/", function () awful.spawn.with_shell("~/.config/misc/dm-scriptlauncher.sh") end,
       {description = "Run Script Launcher", group = "hotkeys"}),
@@ -594,10 +594,10 @@ awful.rules.rules = {
     { rule = { class = "Emacs" },
       properties = { tag = screen[1].tags[2] } },
 
-    { rule_any = { class = { "Steam" } },
+    { rule_any = { class = { "Steam", "Lutris" } },
       properties = { tag = screen[1].tags[8] } },
 
-    { rule_any = { name = { "Steam" } },
+    { rule_any = { name = { "Steam", "Lutris" } },
       properties = { tag = screen[1].tags[8] } },
 
     { rule = { name = "tmux" },
@@ -606,7 +606,7 @@ awful.rules.rules = {
     { rule_any = { name = { "ranger", "btop" } },
       properties = { tag = screen[1].tags[7] } },
 
-    { rule_any = { class = { "Thunar" } },
+    { rule_any = { class = { "Thunar", "Nemo" } },
       properties = { tag = screen[1].tags[7] } },
 
     { rule_any = { class = { "qBittorrent", "Virt-manager" } },

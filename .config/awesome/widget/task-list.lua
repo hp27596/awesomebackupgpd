@@ -202,7 +202,7 @@ local TaskList = function(s)
     s,
     awful.widget.tasklist.filter.currenttags,
     tasklist_buttons,
-    {},
+    { bg_urgent = '#F70000' },
     list_update,
     wibox.layout.flex.horizontal()
   )

@@ -24,7 +24,8 @@ picom --config ~/.config/picom/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # dunst &
 clipmenud &
-touchegg &
+xfsettingsd &
+# touchegg &
 # onboard &
 # feh --bg-fill ~/.config/qtile/1099421.png
 # galaxybudsclient &
