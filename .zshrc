@@ -193,3 +193,5 @@ unsetopt autocd #this is just a pain in the ass most of the time
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+source ~/catppuccin_mocha-zsh-syntax-highlighting.zsh

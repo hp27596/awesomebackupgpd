@@ -18,6 +18,7 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/lambdalisue/suda.vim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 call plug#end()
 
@@ -38,7 +39,7 @@ inoremap <C-v> <C-r>*
 
 :set completeopt-=preview " For No Previews
 
-:colorscheme molokai
+:colorscheme catppuccin-mocha
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"

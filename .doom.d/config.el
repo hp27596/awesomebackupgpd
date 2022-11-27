@@ -218,6 +218,10 @@
 (map! :leader
       :prefix "o"
       :desc "org2blog-user-interface" "o" #'org2blog-user-interface)
+;; open blog post after publish
+(setq org2blog/wp-show-post-in-browser 'show)
+
+
 
 ;; doom emacs dashboard setup
 (use-package dashboard
@@ -310,7 +314,11 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-molokai)
+(setq doom-theme 'catppuccin-mocha)
+
+
+;; (load-theme 'catppuccin-mocha-theme t)
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are di55sabled. For relative line numbers, set this to `relative'. For normal style, set this to `visual'
 (setq display-line-numbers-type 'relative)

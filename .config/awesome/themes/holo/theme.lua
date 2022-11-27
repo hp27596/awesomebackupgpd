@@ -17,21 +17,35 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.default_dir                               = require("awful.util").get_themes_dir() .. "default"
 theme.icon_dir                                  = os.getenv("HOME") .. "/.config/awesome/themes/holo/icons"
-theme.wallpaper                                 = os.getenv("HOME") .. "/.config/awesome/1099421.png"
+theme.wallpaper                                 = os.getenv("HOME") .. "/.config/awesome/YtrjU4I3_4x.jpg"
 theme.font                                      = "Ubuntu Mono 9"
 theme.taglist_font                              = "Ubuntu Mono 9"
-theme.fg_normal                                 = "#FFFFFF"
-theme.fg_focus                                  = "#0099CC"
-theme.bg_focus                                  = "#303030"
-theme.bg_normal                                 = "#242424"
-theme.fg_urgent                                 = "#CC9393"
-theme.bg_urgent                                 = "#006B8E"
+theme.fg_normal                                 = "#CDD6F4" --
+theme.fg_focus                                  = "#313244" --
+theme.bg_focus                                  = "#45475A" --
+theme.bg_normal                                 = "#1D1E2D" --
+theme.fg_urgent                                 = "#f5e0dc" --
+theme.bg_urgent                                 = "#f38ba8" --
 theme.border_width                              = dpi(3)
-theme.border_normal                             = "#252525"
-theme.border_focus                              = "#0099CC"
-theme.taglist_fg_focus                          = "#FFFFFF"
-theme.tasklist_bg_normal                        = "#222222"
-theme.tasklist_fg_focus                         = "#4CB7DB"
+theme.border_normal                             = "#313244" --
+theme.border_focus                              = "#313244" --
+theme.taglist_fg_focus                          = "#CDD6F4" --
+theme.tasklist_bg_normal                        = "#1D1E2D" --
+theme.tasklist_fg_focus                         = "#CDD6F4" --
+
+-- theme.fg_normal                                 = "#FFFFFF"
+-- theme.fg_focus                                  = "#0099CC"
+-- theme.bg_focus                                  = "#303030"
+-- theme.bg_normal                                 = "#242424"
+-- theme.fg_urgent                                 = "#CC9393"
+-- theme.bg_urgent                                 = "#006B8E"
+-- theme.border_width                              = dpi(3)
+-- theme.border_normal                             = "#252525"
+-- theme.border_focus                              = "#0099CC"
+-- theme.taglist_fg_focus                          = "#FFFFFF"
+-- theme.tasklist_bg_normal                        = "#222222"
+-- theme.tasklist_fg_focus                         = "#4CB7DB"
+
 theme.menu_height                               = dpi(20)
 theme.menu_width                                = dpi(160)
 theme.menu_icon_size                            = dpi(36)
@@ -280,7 +294,7 @@ cmus_widget:connect_signal("button::press", function() awful.spawn.with_shell('c
 -- Launcher
 local mylauncher = awful.widget.button({ image = theme.awesome_icon_launcher, layout = wibox.layout.fixed.horizontal() })
 mylauncher = wibox.container.margin(mylauncher, dpi(5), dpi(5), dpi(5), dpi(5))
-mylauncher = wibox.container.background(mylauncher, theme.bg_focus, gears.shape.rectangle)
+mylauncher = wibox.container.background(mylauncher, theme.bg_normal, gears.shape.rectangle)
 mylauncher:connect_signal("button::press", function() awful.spawn.with_shell('xfce4-appfinder') end )
 
 local lockbutton = awful.widget.button({ image = theme.powerw })
@@ -313,12 +327,12 @@ local spr_left = wibox.widget.imagebox(theme.spr_left)
 local bar = wibox.widget.imagebox(theme.bar)
 local vertbar = wibox.widget.textbox(' | ')
 
-local barcolor  = gears.color({
-    type  = "linear",
-    from  = { dpi(32), 0 },
-    to    = { dpi(32), dpi(32) },
-    stops = { {0, theme.bg_focus}, {0.25, "#505050"}, {1, theme.bg_focus} }
-})
+-- local barcolor  = gears.color({
+--     type  = "linear",
+--     from  = { dpi(32), 0 },
+--     to    = { dpi(32), dpi(32) },
+--     stops = { {0, theme.bg_normal}, {0.25, "#505050"}, {1, theme.bg_normal} }
+-- })
 
 function theme.at_screen_connect(s)
     -- Quake application
@@ -356,15 +370,15 @@ function theme.at_screen_connect(s)
         },
         style = {
             -- shape = gears.shape.powerline,
-            bg_urgent = '#F70000',
-            bg_focus = barcolor,
+            bg_urgent = theme.bg_urgent,
+            bg_focus = theme.bg_focus,
             font = 10,
             spacing = 28,
         },
     }
 
     s.mytaglist = wibox.container.margin(s.mytaglist, dpi(2), dpi(0), dpi(5), dpi(5))
-    s.mytag = wibox.container.background(s.mytaglist, theme.bg_focus, gears.shape.rectangle)
+    s.mytag = wibox.container.background(s.mytaglist, theme.bg_normal, gears.shape.rectangle)
     -- s.mytag = wibox.container.margin(mytaglistcont, dpi(0), dpi(0), dpi(0), dpi(0))
 
     local tasks = require('widget.task-list')

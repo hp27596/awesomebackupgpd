@@ -18,7 +18,7 @@
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
 ;; (package! dashboard)
-; (package! evil-commentary)
+;; (package! evil-commentary)
 ;; (package! php-cs-fixer)
 ;; (package! phpactor)
 ;; (package! sublimity)
@@ -26,6 +26,7 @@
 (package! demap)
 (package! ox-hugo)
 (package! beacon)
+(package! autothemer)
 ;; (package! org-auto-tangle)
 ;; (package! org2blog)
 (package! wc-mode)

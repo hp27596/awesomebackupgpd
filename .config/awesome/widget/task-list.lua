@@ -98,6 +98,7 @@ local function list_update(w, buttons, label, data, objects)
         mode = 'outside',
         align = 'bottom',
         delay_show = 1,
+        fg = '#FFFFFF',
       })
 
       data[o] = {
@@ -119,16 +120,19 @@ local function list_update(w, buttons, label, data, objects)
     else
       -- truncate when title is too long
       local textOnly = text:match('>(.-)<')
-      if (textOnly:len() > 28) then
-        text = text:gsub('>(.-)<', '>' .. textOnly:sub(1, 25) .. '...<')
-        tt:set_text(textOnly)
-        tt:add_to_object(tb)
-      else
-        tt:remove_from_object(tb)
-      end
-      if not tb:set_markup_silently(text) then
-        tb:set_markup('<i>&lt;Invalid text&gt;</i>')
-      end
+      -- if (textOnly:len() > 35) then
+      --   text = text:gsub('>(.-)<', '>' .. textOnly:sub(1, 32) .. '...<')
+      tt:set_text(textOnly)
+      -- tt:add_to_object(tb)
+      -- else
+      --   tt:remove_from_object(tb)
+      -- end
+      -- if not tb:set_markup_silently(text) then
+      --   tb:set_markup('<i>&lt;Invalid text&gt;</i>')
+      -- end
+
+      tb:set_markup_silently(text)
+
     end
     bgb:set_bg(bg)
     if type(bg_image) == 'function' then
@@ -146,7 +150,7 @@ local function list_update(w, buttons, label, data, objects)
     bgb.shape_border_width = args.shape_border_width
     bgb.shape_border_color = args.shape_border_color
 
-    bgb = wibox.container.margin(bgb, dpi(3), dpi(1), dpi(2), dpi(2), "#242424")
+    bgb = wibox.container.margin(bgb, dpi(3), dpi(1), dpi(2), dpi(2))
 
     w:add(bgb)
     w:set_max_widget_size(dpi(175))
@@ -202,7 +206,7 @@ local TaskList = function(s)
     s,
     awful.widget.tasklist.filter.currenttags,
     tasklist_buttons,
-    { bg_urgent = '#F70000' },
+    { bg_urgent = "#f38ba8" },
     list_update,
     wibox.layout.flex.horizontal()
   )

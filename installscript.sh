@@ -45,7 +45,7 @@ tlp-rdw
 #systemctl --user enable pulseaudio pulseaudio.socket
 
 # Install personal packages
-yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-mod aircrack-ng bully reaver tmux libreoffice-still metasploit cowpatty wireshark-qt termshark macchanger pixiewps john android-sdk-platform-tools nerd-fonts-jetbrains-mono krita xorg-fonts gucharmap qbittorrent rustscan cpupower-gui wine-staging bottom vlc tldr lutris fcitx5 fcitx5-gtk fcitx5-qt fcitx5-unikey kcm-fcitx5 btop clipmenu gparted pass pass-otp sxiv scrcpy qutebrowser trash-cli kdeconnect zathura zathura-pdf-mupdf easytag gnome-power-manager yt-dlp gthumb qalculate-gtk galculator hashcat shotwell kate bettercap pyenv zaproxy audacious rofi qt5ct gnome-themes-extra adwaita-qt5 adwaita-qt6 cpupower lmms neofetch kdenlive newsboat zbar hcxtools hcxdumptool hydra xfce4-settings
+yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-mod aircrack-ng bully reaver tmux libreoffice-still metasploit cowpatty wireshark-qt termshark macchanger pixiewps john android-sdk-platform-tools nerd-fonts-jetbrains-mono krita xorg-fonts gucharmap qbittorrent rustscan cpupower-gui wine-staging bottom vlc tldr lutris fcitx5 fcitx5-gtk fcitx5-qt fcitx5-unikey kcm-fcitx5 btop clipmenu gparted pass pass-otp sxiv scrcpy qutebrowser trash-cli kdeconnect zathura zathura-pdf-mupdf easytag gnome-power-manager yt-dlp gthumb qalculate-gtk galculator hashcat shotwell kate bettercap pyenv zaproxy audacious rofi qt5ct gnome-themes-extra adwaita-qt5 adwaita-qt6 cpupower lmms neofetch kdenlive newsboat zbar hcxtools hcxdumptool hydra xfce4-settings audacity
 
 
 # Install AUR packages
@@ -72,6 +72,8 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+cd ~/
+wget https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # dark theme for qbittorrent
 wget https://github.com/dracula/qbittorrent/raw/master/qbittorrent.qbtheme

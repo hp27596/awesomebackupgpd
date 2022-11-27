@@ -1,8 +1,33 @@
+colorscheme dracula
+set color_titleline_fg=black
+colorscheme default
+set color_titleline_bg=blue
+set color_titleline_bg=gray
+colorscheme green
+set color_statusline_bg=gray
+colorscheme amazon
+colorscheme gray-88
+colorscheme cyan
+colorscheme night
+colorscheme rc
+colorscheme xterm-white
+colorscheme zenburn
+colorsheme 
+colorscheme tomorrow
+colorscheme ob2
+colorscheme tomottor
+colorscheme 
+set color_win_cur_sel_bg=white
+set color_win_cur_sel_bg=default
+set color_win_cur_sel_bg=black
+set status_display_program=/usr/local/bin/cmus_ntf.sh
+set status_display_program=
+w
+set status_display_program=/usr/local/bin/cmus-ntf.sh
+set status_display_program=/usr/bin/cmus_notify
 fset flac=filename="*.flac"
 set status_display_program=/usr/local/bin/cmus-notify
 set status_display_program=/usr/bin/cmus-notify
-set status_display_program=/usr/bin/cmus_notify
-set status_display_program=
 q
 add /mnt/SDcard/Nextcloud/Music
 factivate flac

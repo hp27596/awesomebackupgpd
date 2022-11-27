@@ -282,7 +282,7 @@ globalkeys = my_table.join(
         {description = "Capture Part of Screen", group = "hotkeys"}),
 
     -- Caffeinate
-    awful.key({ modkey, "Shift" }, "e",
+    awful.key({ modkey, "Shift" }, "n",
         function ()
             awful.spawn.with_shell("~/.config/awesome/caffe_toggle.sh")
         end,
@@ -305,6 +305,9 @@ globalkeys = my_table.join(
         {description = "Focus next by index", group = "client"}),
     awful.key({ modkey,         }, "Left", function () awful.client.focus.byidx(-1) end,
         {description = "Focus previous by index", group = "client"}),
+
+    -- awful.key({ modkey }, "`", function () awful.tag.history.restore(awful.screen.focused(), 1) end,
+    --     {description = "Last tag toggle", group = "client"}),
 
     awful.key({ modkey,         }, "Tab", function () awful.client.focus.byidx( 1) end,
         {description = "Focus next by index", group = "client"}),
@@ -500,9 +503,15 @@ for i = 1, 9 do
                   function ()
                         local screen = awful.screen.focused()
                         local tag = screen.tags[i]
+
                         if tag then
-                           tag:view_only()
+                            if tag.selected then
+                                awful.tag.history.restore(screen, 1)
+                            else
+                                tag:view_only()
+                            end
                         end
+
                   end,
                   descr_view),
         -- Toggle tag display.
