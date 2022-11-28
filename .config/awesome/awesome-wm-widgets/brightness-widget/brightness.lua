@@ -70,9 +70,11 @@ local function worker(user_args)
         brightness_widget.widget = wibox.widget {
             {
                 {
-                    image = path_to_icon,
-                    resize = false,
-                    widget = wibox.widget.imagebox,
+                    -- image = path_to_icon,
+                    text = "",
+                    -- resize = true,
+                    font = font,
+                    widget = wibox.widget.textbox,
                 },
                 valign = 'center',
                 layout = wibox.container.place
@@ -121,7 +123,7 @@ local function worker(user_args)
     end
 
     local update_widget = function(widget, stdout, _, _, _)
-        local brightness_level = string.format(" %.0f", tonumber(string.format("%.0f", stdout))/4.8) -- number 15 is a hack because my max brightness is 1500
+        local brightness_level = string.format("%.0f", tonumber(string.format("%.0f", stdout))/4.8) -- number 15 is a hack because my max brightness is 1500
         current_level = brightness_level
         widget:set_value(brightness_level)
     end

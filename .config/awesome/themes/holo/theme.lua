@@ -27,11 +27,18 @@ theme.bg_normal                                 = "#1D1E2D" --
 theme.fg_urgent                                 = "#f5e0dc" --
 theme.bg_urgent                                 = "#f38ba8" --
 theme.border_width                              = dpi(3)
-theme.border_normal                             = "#313244" --
-theme.border_focus                              = "#313244" --
-theme.taglist_fg_focus                          = "#CDD6F4" --
-theme.tasklist_bg_normal                        = "#1D1E2D" --
-theme.tasklist_fg_focus                         = "#CDD6F4" --
+theme.border_normal                             = theme.fg_focus --
+theme.border_focus                              = theme.bg_focus --
+theme.taglist_fg_focus                          = theme.fg_normal --
+theme.tasklist_bg_normal                        = theme.bg_normal --
+theme.tasklist_fg_focus                         = theme.fg_normal --
+
+theme.yellow                                    = "#f9e2af"
+theme.purple                                    = "#cba6f7"
+theme.red                                       = "#f38ba8"
+theme.green                                     = "#a6e3a1"
+theme.blue                                      = "#89b4fa"
+theme.teal                                      = "#94e2d5"
 
 -- theme.fg_normal                                 = "#FFFFFF"
 -- theme.fg_focus                                  = "#0099CC"
@@ -52,27 +59,27 @@ theme.menu_icon_size                            = dpi(36)
 theme.cross = theme.icon_dir .. "/close.svg"
 theme.awesome_icon                              = theme.icon_dir .. "/awesome_icon_white.png"
 theme.awesome_icon_launcher                     = theme.icon_dir .. "/arch.png"
-theme.taglist_squares_sel                       = theme.icon_dir .. "/square_sel.png"
-theme.taglist_squares_unsel                     = theme.icon_dir .. "/square_unsel.png"
-theme.spr_small                                 = theme.icon_dir .. "/spr_small.png"
-theme.spr_very_small                            = theme.icon_dir .. "/spr_very_small.png"
-theme.spr_right                                 = theme.icon_dir .. "/spr_right.png"
-theme.spr_bottom_right                          = theme.icon_dir .. "/spr_bottom_right.png"
-theme.spr_left                                  = theme.icon_dir .. "/spr_left.png"
-theme.bar                                       = theme.icon_dir .. "/bar.png"
+-- theme.taglist_squares_sel                       = theme.icon_dir .. "/square_sel.png"
+-- theme.taglist_squares_unsel                     = theme.icon_dir .. "/square_unsel.png"
+-- theme.spr_small                                 = theme.icon_dir .. "/spr_small.png"
+-- theme.spr_very_small                            = theme.icon_dir .. "/spr_very_small.png"
+-- theme.spr_right                                 = theme.icon_dir .. "/spr_right.png"
+-- theme.spr_bottom_right                          = theme.icon_dir .. "/spr_bottom_right.png"
+-- theme.spr_left                                  = theme.icon_dir .. "/spr_left.png"
+-- theme.bar                                       = theme.icon_dir .. "/bar.png"
 -- theme.bottom_bar                                = theme.icon_dir .. "/bottom_bar.png"
-theme.mpdl                                      = theme.icon_dir .. "/mpd.png"
-theme.mpd_on                                    = theme.icon_dir .. "/mpd_on.png"
-theme.prev                                      = theme.icon_dir .. "/prev.png"
-theme.nex                                       = theme.icon_dir .. "/next.png"
-theme.stop                                      = theme.icon_dir .. "/stop.png"
-theme.pause                                     = theme.icon_dir .. "/pause.png"
-theme.play                                      = theme.icon_dir .. "/play.png"
+-- theme.mpdl                                      = theme.icon_dir .. "/mpd.png"
+-- theme.mpd_on                                    = theme.icon_dir .. "/mpd_on.png"
+-- theme.prev                                      = theme.icon_dir .. "/prev.png"
+-- theme.nex                                       = theme.icon_dir .. "/next.png"
+-- theme.stop                                      = theme.icon_dir .. "/stop.png"
+-- theme.pause                                     = theme.icon_dir .. "/pause.png"
+-- theme.play                                      = theme.icon_dir .. "/play.png"
 theme.clock                                     = theme.icon_dir .. "/clock.png"
 theme.calendar                                  = theme.icon_dir .. "/cal.png"
 theme.cpu                                       = theme.icon_dir .. "/cpu.png"
-theme.net_up                                    = theme.icon_dir .. "/net_up.png"
-theme.net_down                                  = theme.icon_dir .. "/net_down.png"
+-- theme.net_up                                    = theme.icon_dir .. "/net_up.png"
+-- theme.net_down                                  = theme.icon_dir .. "/net_down.png"
 theme.layout_tile                               = theme.icon_dir .. "/tile.png"
 theme.layout_tileleft                           = theme.icon_dir .. "/tileleft.png"
 theme.layout_tilebottom                         = theme.icon_dir .. "/tilebottom.png"
@@ -90,35 +97,35 @@ theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
 theme.useless_gap                               = dpi(3)
 theme.gap_single_client = false
-theme.titlebar_close_button_normal              = theme.default_dir.."/titlebar/close_normal.png"
-theme.titlebar_close_button_focus               = theme.default_dir.."/titlebar/close_focus.png"
-theme.titlebar_minimize_button_normal           = theme.default_dir.."/titlebar/minimize_normal.png"
-theme.titlebar_minimize_button_focus            = theme.default_dir.."/titlebar/minimize_focus.png"
-theme.titlebar_ontop_button_normal_inactive     = theme.default_dir.."/titlebar/ontop_normal_inactive.png"
-theme.titlebar_ontop_button_focus_inactive      = theme.default_dir.."/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_active       = theme.default_dir.."/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_active        = theme.default_dir.."/titlebar/ontop_focus_active.png"
-theme.titlebar_sticky_button_normal_inactive    = theme.default_dir.."/titlebar/sticky_normal_inactive.png"
-theme.titlebar_sticky_button_focus_inactive     = theme.default_dir.."/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_active      = theme.default_dir.."/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_active       = theme.default_dir.."/titlebar/sticky_focus_active.png"
-theme.titlebar_floating_button_normal_inactive  = theme.default_dir.."/titlebar/floating_normal_inactive.png"
-theme.titlebar_floating_button_focus_inactive   = theme.default_dir.."/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_active    = theme.default_dir.."/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_active     = theme.default_dir.."/titlebar/floating_focus_active.png"
-theme.titlebar_maximized_button_normal_inactive = theme.default_dir.."/titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = theme.default_dir.."/titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_active   = theme.default_dir.."/titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_active    = theme.default_dir.."/titlebar/maximized_focus_active.png"
+-- theme.titlebar_close_button_normal              = theme.default_dir.."/titlebar/close_normal.png"
+-- theme.titlebar_close_button_focus               = theme.default_dir.."/titlebar/close_focus.png"
+-- theme.titlebar_minimize_button_normal           = theme.default_dir.."/titlebar/minimize_normal.png"
+-- theme.titlebar_minimize_button_focus            = theme.default_dir.."/titlebar/minimize_focus.png"
+-- theme.titlebar_ontop_button_normal_inactive     = theme.default_dir.."/titlebar/ontop_normal_inactive.png"
+-- theme.titlebar_ontop_button_focus_inactive      = theme.default_dir.."/titlebar/ontop_focus_inactive.png"
+-- theme.titlebar_ontop_button_normal_active       = theme.default_dir.."/titlebar/ontop_normal_active.png"
+-- theme.titlebar_ontop_button_focus_active        = theme.default_dir.."/titlebar/ontop_focus_active.png"
+-- theme.titlebar_sticky_button_normal_inactive    = theme.default_dir.."/titlebar/sticky_normal_inactive.png"
+-- theme.titlebar_sticky_button_focus_inactive     = theme.default_dir.."/titlebar/sticky_focus_inactive.png"
+-- theme.titlebar_sticky_button_normal_active      = theme.default_dir.."/titlebar/sticky_normal_active.png"
+-- theme.titlebar_sticky_button_focus_active       = theme.default_dir.."/titlebar/sticky_focus_active.png"
+-- theme.titlebar_floating_button_normal_inactive  = theme.default_dir.."/titlebar/floating_normal_inactive.png"
+-- theme.titlebar_floating_button_focus_inactive   = theme.default_dir.."/titlebar/floating_focus_inactive.png"
+-- theme.titlebar_floating_button_normal_active    = theme.default_dir.."/titlebar/floating_normal_active.png"
+-- theme.titlebar_floating_button_focus_active     = theme.default_dir.."/titlebar/floating_focus_active.png"
+-- theme.titlebar_maximized_button_normal_inactive = theme.default_dir.."/titlebar/maximized_normal_inactive.png"
+-- theme.titlebar_maximized_button_focus_inactive  = theme.default_dir.."/titlebar/maximized_focus_inactive.png"
+-- theme.titlebar_maximized_button_normal_active   = theme.default_dir.."/titlebar/maximized_normal_active.png"
+-- theme.titlebar_maximized_button_focus_active    = theme.default_dir.."/titlebar/maximized_focus_active.png"
 
-theme.musicplr = string.format("%s -e ncmpcpp", awful.util.terminal)
+-- theme.musicplr = string.format("%s -e ncmpcpp", awful.util.terminal)
 
 local markup = lain.util.markup
-local blue   = "#80CCE6"
+-- local blue   = "#80CCE6"
 local space3 = markup.font("Roboto 3", " ")
 
 -- Clock
-local mytextclock = wibox.widget.textclock(markup("#FFFFFF", space3 .. "%H:%M" .. markup.font("Roboto 4", " ")))
+local mytextclock = wibox.widget.textclock(markup(theme.purple, space3 .. "%H:%M" .. markup.font(theme.font, " ")))
 mytextclock.font = theme.font
 -- local clock_icon = wibox.widget.imagebox(theme.clock)
 -- local clockbg = wibox.container.background(mytextclock, theme.bg_focus, gears.shape.rectangle)
@@ -126,14 +133,14 @@ mytextclock.font = theme.font
 local clockwidget = wibox.container.margin(mytextclock, dpi(0), dpi(0), dpi(0), dpi(0))
 
 -- Calendar
-local mytextcalendar = wibox.widget.textclock(markup.fontfg(theme.font, "#FFFFFF", space3 .. "%a %d %b" .. markup.font("Roboto 5", " ")))
+local mytextcalendar = wibox.widget.textclock(markup.fontfg(theme.font, theme.red, space3 .. "%a %d %b" .. markup.font("Roboto 5", " ")))
 -- local calbg = wibox.widget.imagebox(theme.calendar)
 -- local calbg = wibox.container.background(mytextcalendar, theme.bg_focus, gears.shape.rectangle)
 local calendarwidget = wibox.container.margin(mytextcalendar, dpi(0), dpi(0), dpi(1), dpi(1))
 theme.cal = lain.widget.cal({
     attach_to = { mytextclock, mytextcalendar },
     notification_preset = {
-        fg = "#FFFFFF",
+        fg = theme.fg_normal,
         bg = theme.bg_normal,
         position = "top_right",
         font = "Monospace 10"
@@ -229,7 +236,7 @@ local bat = lain.widget.bat({
             bat_header = bat_header .. " "
         end
         -- widget:set_markup(markup.font(theme.font, markup(blue, bat_header) .. bat_p))
-        widget:set_markup(markup.font("Roboto 8", bat_header) .. bat_p)
+        widget:set_markup(markup.fontfg("Roboto 7", theme.red, bat_header) .. markup.fontfg(theme.font, theme.red, bat_p))
     end
 })
 -- bat = wibox.container.background(bat.widget, theme.bg_focus, gears.shape.rectangle)
@@ -259,31 +266,31 @@ local bat = lain.widget.bat({
 
 -- Wireless Widget
 local net_widgets = require("net_widgets")
-net_wireless = net_widgets.wireless({interface = "wlp1s0",
-                                     onclick = "alacritty -e /home/hp/.config/misc/nmtui.sh"})
--- net_wireless = wibox.container.background(net_wireless, theme.bg_focus, gears.shape.rectangle)
+net_wireless = net_widgets.wireless({interface = "wlp44s0",
+                                     onclick = "alacritty -e /home/hp/.config/misc/nmtui.sh",
+                                     font = "Ubuntu Mono 9", })
 
 
 -- Coretemp
-local tempicon = wibox.widget.imagebox(theme.widget_temp)
+-- local tempicon = wibox.widget.imagebox(theme.widget_temp)
 -- local tempfile = "/sys/devices/virtual/thermal/thermal_zone8/temp"
 local temp = lain.widget.temp({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.taglist_font, "#FFFFFF", " " .. coretemp_now .. "°C"))
+        widget:set_markup(markup.fontfg(theme.font, theme.yellow, " " .. coretemp_now .. "°C"))
     end
 })
 
 
 -- Volume
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widget_type = 'icon_and_text' }
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume') { widget_type = 'icon_and_text', font = theme.font }
 -- volume_widget = wibox.container.background(volume_widget, theme.bg_focus, gears.shape.rectangle)
 
 -- Backlight
-local brightness_widget = require('awesome-wm-widgets.brightness-widget.brightness') { type = 'icon_and_text', program = 'brightnessctl', base = 65, tooltip = true, percentage = true, timeout = 100, step = 5 }
+local brightness_widget = require('awesome-wm-widgets.brightness-widget.brightness') { type = 'icon_and_text', program = 'brightnessctl', base = 65, percentage = true, timeout = 100, step = 5, font = theme.font }
 
 -- Cmus
 -- local cmus_widget = require('awesome-wm-widgets.cmus-widget.cmus') { space = 5, timeout = 5 }
-local cmus_widget = awful.widget.watch([[ bash -c '~/.config/awesome/cmus.sh' ]], 5, function(widget, stdout)  widget:set_markup(markup.font("Ubuntu Mono 9", stdout)) end )
+local cmus_widget = awful.widget.watch([[ bash -c '~/.config/awesome/cmus.sh' ]], 5, function(widget, stdout)  widget:set_markup(markup.fontfg("Ubuntu Mono 9", theme.blue, stdout)) end )
 cmus_widget = wibox.container.margin(cmus_widget, dpi(0), dpi(0), dpi(3), dpi(4))
 cmus_widget:connect_signal("button::press", function() awful.spawn.with_shell('cmus-remote -u') end )
 -- cmus_widget = wibox.container.background(cmus_widget, theme.bg_focus, gears.shape.rectangle)
@@ -302,7 +309,7 @@ lockbutton = wibox.container.margin(lockbutton, dpi(0), dpi(8), dpi(8), dpi(8))
 lockbutton:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/misc/dm-logout.sh') end )
 
 -- Caffeinate
-caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.font("Ubuntu Mono 20", stdout)) end )
+caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.fontfg("Ubuntu Mono 20", theme.yellow, stdout)) end )
 caffeine_widget:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/awesome/caffe_toggle.sh') end )
 -- caffeine_widget = wibox.container.background(caffeine_widget, theme.bg_focus, gears.shape.rectangle)
 caffeine_widget = wibox.container.margin(caffeine_widget, dpi(0), dpi(0), dpi(0), dpi(0))
@@ -318,14 +325,15 @@ rot_widgetcont = wibox.container.margin(rot_widget, dpi(8), dpi(0), dpi(-5), dpi
 -- onboard = wibox.container.margin(onboard, dpi(8), dpi(0), dpi(6), dpi(2))
 
 -- Separators
-local first = wibox.widget.textbox('<span font="Roboto 7"> </span>')
-local spr_small = wibox.widget.imagebox(theme.spr_small)
-local spr_very_small = wibox.widget.imagebox(theme.spr_very_small)
-local spr_right = wibox.widget.imagebox(theme.spr_right)
-local spr_bottom_right = wibox.widget.imagebox(theme.spr_bottom_right)
-local spr_left = wibox.widget.imagebox(theme.spr_left)
-local bar = wibox.widget.imagebox(theme.bar)
-local vertbar = wibox.widget.textbox(' | ')
+-- local first = wibox.widget.textbox('<span font="Roboto 7"> </span>')
+-- local spr_small = wibox.widget.imagebox(theme.spr_small)
+-- local spr_very_small = wibox.widget.imagebox(theme.spr_very_small)
+-- local spr_right = wibox.widget.imagebox(theme.spr_right)
+-- local spr_bottom_right = wibox.widget.imagebox(theme.spr_bottom_right)
+-- local spr_left = wibox.widget.imagebox(theme.spr_left)
+-- local bar = wibox.widget.imagebox(theme.bar)
+local doublespace = wibox.widget.textbox('  ')
+local singlespace = wibox.widget.textbox(' ')
 
 -- local barcolor  = gears.color({
 --     type  = "linear",
@@ -425,27 +433,25 @@ function theme.at_screen_connect(s)
         tasks(s), -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            vertbar,
+            doublespace,
             temp,
-            vertbar,
-            brightness_widget,
-            vertbar,
+            doublespace,
+            { brightness_widget, fg = theme.green, widget = wibox.container.background },
+            doublespace,
             bat,
-            vertbar,
-            net_wireless,
-            vertbar,
-            volume_widget,
-            vertbar,
-            -- calendar_icon,
+            doublespace,
+            { net_wireless, fg = theme.blue, widget = wibox.container.background },
+            doublespace,
+            { volume_widget, fg = theme.green, widget = wibox.container.background },
+            singlespace,
             calendarwidget,
-            vertbar,
-            -- clock_icon,
+            singlespace,
             clockwidget,
-            -- vertbar,
-            -- cmus_widget,
-            vertbar,
+            singlespace,
+            cmus_widget,
+            singlespace,
             caffeine_widget,
-            vertbar,
+            doublespace,
             lockbutton,
         },
     }

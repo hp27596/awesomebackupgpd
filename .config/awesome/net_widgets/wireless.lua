@@ -116,11 +116,11 @@ local function worker(args)
         end)
         if signal_level == nil then
             connected = false
-            net_text:set_text("ﲁ")
+            net_text:set_text("睊")
             -- net_icon:set_image(draw_signal(0))
         else
             connected = true
-            net_text:set_text(string.format("說" .. " %"..indent.."d%%", signal_level))
+            net_text:set_text(string.format("直".."%"..indent.."d%%", signal_level))
             -- net_icon:set_image(draw_signal(signal_level))
         end
     end

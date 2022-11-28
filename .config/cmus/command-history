@@ -1,9 +1,9 @@
 colorscheme dracula
+colorscheme green
 set color_titleline_fg=black
 colorscheme default
 set color_titleline_bg=blue
 set color_titleline_bg=gray
-colorscheme green
 set color_statusline_bg=gray
 colorscheme amazon
 colorscheme gray-88

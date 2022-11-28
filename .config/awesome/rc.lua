@@ -309,16 +309,22 @@ globalkeys = my_table.join(
     -- awful.key({ modkey }, "`", function () awful.tag.history.restore(awful.screen.focused(), 1) end,
     --     {description = "Last tag toggle", group = "client"}),
 
-    awful.key({ modkey,         }, "Tab", function () awful.client.focus.byidx( 1) end,
-        {description = "Focus next by index", group = "client"}),
-    awful.key({ modkey, "Shift" }, "Tab", function () awful.client.focus.byidx(-1) end,
-        {description = "Focus previous by index", group = "client"}),
+    -- awful.key({ modkey,         }, "Tab", function () awful.client.focus.byidx( 1) end,
+    --     {description = "Focus next by index", group = "client"}),
+    -- awful.key({ modkey, "Shift" }, "Tab", function () awful.client.focus.byidx(-1) end,
+    --     {description = "Focus previous by index", group = "client"}),
 
     -- Non-empty tag browsing CTRL+TAB (CTRL+SHIFT+TAB)
-    -- awful.key({ altkey }, "Tab", function () lain.util.tag_view_nonempty(-1) end,
+    -- awful.key({ modkey, "Shift" }, "Tab", function () lain.util.tag_view_nonempty(-1) end,
     --           {description = "view  previous nonempty", group = "tag"}),
-    -- awful.key({ altkey, "Shift" }, "Tab", function () lain.util.tag_view_nonempty(1) end,
+    -- awful.key({ modkey }, "Tab", function () lain.util.tag_view_nonempty(1) end,
     --           {description = "view  previous nonempty", group = "tag"}),
+
+    -- Tag switch
+    awful.key({ modkey, "Shift" }, "Tab", awful.tag.viewprev,
+              {description = "view  previous nonempty", group = "tag"}),
+    awful.key({ modkey }, "Tab", awful.tag.viewnext,
+              {description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
     awful.key({ modkey,         }, "k", function () awful.client.focus.byidx( 1) end,
