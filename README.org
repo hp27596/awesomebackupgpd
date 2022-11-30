@@ -1,38 +1,33 @@
-#+title: My backed up AwesomeWM config
+#+title: My AwesomeWM config
 #+author: Hp
 
 
 This is my dotfiles for my AwesomeWM machine, including dots for tools I used.
 
-I wrote about my full experience daily driving AwesomeWM [[https://peterconfidential.com/awesomewm-documentation-tips-tricks][here]], so check it out if you'd like to read further about AwesomeWM.
+My dotfiles and configs are purely functional for me. I like things looking nice, but never at the cost of workflow optimization. I like fitting lots of things in my screen. Of course, if something looks nice, then I won't complain. I still use picom for the love of god.
 
-[[Placeholder]]
+* Table of Contents :TOC_3:
+- [[#read-this][READ THIS!]]
+- [[#why-is-everything-so-large][Why is everything so large?]]
+- [[#usage][Usage]]
+- [[#extras][Extras]]
+  - [[#scripts][Scripts]]
+  - [[#dmenu][Dmenu]]
+  - [[#emacs][Emacs]]
+  - [[#check-out-my-blog-for-more-linux-stuff][Check out my blog for more linux stuff]]
 
-My dotfiles and configs are, for the most part, purely functional for me. I like things looking nice, but never at the cost of workflow optimization. I like fitting lots of things in my screen. Of course, if something looks nice, then I won't complain. I still use picom for the love of god.
-
-** Table of Contents :TOC_3:
-  - [[#read-this][READ THIS!]]
-  - [[#why-is-everything-so-large][Why is everything so large?]]
-  - [[#usage][Usage]]
-  - [[#extras][Extras]]
-    - [[#scripts][Scripts]]
-    - [[#dmenu][Dmenu]]
-    - [[#emacs][Emacs]]
-
-** READ THIS!
+* READ THIS!
 This repo is meant to be used as my backup repo. I *STRONGLY* advise against blindly copy everything to your home folder. You should know what you're putting in your machine. This is meant to be a source of inspiration and reference.
 
 My config also goes through several iterations of changes and optimization. What you see in the photos today might not be there tomorrow. It's probably available in the repo history somewhere though. Ask me if you have any questions.
 
-** Why is everything so large?
+* Why is everything so large?
 I'm using a 7 inch umpc, hence the scaling needs to be that way. The plus side is it makes for good demonstration and screenshots. You can scale back the DPI with the file =~/.Xresources=.
 
-[[MVIMG_20220721_234851.jpg]]
+[[MVIMG_20221130_103146.jpg]]
 
-** Usage
+* Usage
 I run the script ~backup.sh~ periodically to copy all my personal dotfiles to this repo and upload it to github.
-
-[[Placeholder]]
 
 +If you want to install everything as is what I have though, run the file installscript.sh.+ (You could, but don't do that.)
 
@@ -40,17 +35,18 @@ I run the script ~backup.sh~ periodically to copy all my personal dotfiles to th
 
 Ideally, if I were you, I'd look into which tools I'd like to check out, and only copy the dotfiles of that tool. E.g, if I want to check out this repo's AwesomeWM config, I'd go ahead and copy ~awesomebackup/.config/awesome~ to my ~.config~ folder
 
-** Extras
-*** Scripts
+* Extras
+** Scripts
 There's a bunch of scripts I wrote and find useful in =~/.config/misc/= folder. Check it out if you like. The dmenu script to launch scripts is ~dm-scriptlauncher.sh~.
 
-*** Dmenu
+** Dmenu
 I use a lot of dmenu for my workflow convenience. Dmenu scripts are listed as =dm-= something in my scripts folder. I find dmenu the perfect menu for scripting, and I don't find the need to use anything else.
 
 You can find a dmenu fork repo that I use personally in my github profile.
 
 [[https://peterconfidential.com/dmenu-collection][You can also read a blog post I write about dmenu here]]
 
-*** Emacs
+** Emacs
 I use emacs as my main text editor, thus my config files are heavily skewed towards making emacs integrate with the system. There's also a basic neovim config in here if you want to use that.
 
+** [[https://peterconfidential.com][Check out my blog for more linux stuff]]
