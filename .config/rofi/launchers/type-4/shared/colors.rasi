@@ -15,4 +15,4 @@
 
 /* Import color-scheme from `colors` directory */
 
-@import "../../colors/catppuccin.rasi"
+@import "../../colors/ayu-dark.rasi"

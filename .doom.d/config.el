@@ -314,10 +314,18 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'catppuccin-mocha)
+(setq doom-theme 'doom-ayu-dark)
+(setq doom-ayu-dark-brighter-comments t)
 
+(custom-theme-set-faces 'user
+                        `(org-level-5 ((t (:foreground "#D2A6FF" :weight normal))))
+                        `(org-level-6 ((t (:foreground "#FFA500" :weight normal))))
+                        `(org-level-7 ((t (:foreground "#53BDFA" :weight normal))))
+                        `(org-level-8 ((t (:foreground "#90E1C6" :weight normal))))
+                        ;; `(font-lock-comment-face ((t (:foreground "#D2A6FF"))))
+                        `(org-level-3 ((t (:foreground "orange" :weight bold)))))
+(setq rainbow-mode 1)
 
-;; (load-theme 'catppuccin-mocha-theme t)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are di55sabled. For relative line numbers, set this to `relative'. For normal style, set this to `visual'

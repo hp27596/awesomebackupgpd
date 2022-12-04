@@ -1,17 +1,19 @@
+colorscheme night
+colorscheme zenburn
+colorscheme amazon
+colorscheme default
+colorscheme jellybeans
+colorscheme gruvbox
+colorscheme cyan
 colorscheme dracula
 colorscheme green
 set color_titleline_fg=black
-colorscheme default
 set color_titleline_bg=blue
 set color_titleline_bg=gray
 set color_statusline_bg=gray
-colorscheme amazon
 colorscheme gray-88
-colorscheme cyan
-colorscheme night
 colorscheme rc
 colorscheme xterm-white
-colorscheme zenburn
 colorsheme 
 colorscheme tomorrow
 colorscheme ob2

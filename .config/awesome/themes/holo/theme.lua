@@ -17,28 +17,28 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.default_dir                               = require("awful.util").get_themes_dir() .. "default"
 theme.icon_dir                                  = os.getenv("HOME") .. "/.config/awesome/themes/holo/icons"
-theme.wallpaper                                 = os.getenv("HOME") .. "/.config/awesome/YtrjU4I3_4x.jpg"
+theme.wallpaper                                 = os.getenv("HOME") .. "/.config/awesome/wall.jpg"
 theme.font                                      = "Ubuntu Mono 9"
 theme.taglist_font                              = "Ubuntu Mono 9"
-theme.fg_normal                                 = "#CDD6F4" --
-theme.fg_focus                                  = "#313244" --
-theme.bg_focus                                  = "#45475A" --
-theme.bg_normal                                 = "#1D1E2D" --
-theme.fg_urgent                                 = "#f5e0dc" --
-theme.bg_urgent                                 = "#f38ba8" --
+theme.fg_normal                                 = "#B3B1AD" --
+theme.fg_focus                                  = "#01060E" --
+theme.bg_focus                                  = "#53BDFA" --
+theme.bg_normal                                 = "#0A0E14" --
+theme.fg_urgent                                 = theme.fg_focus --
+theme.bg_urgent                                 = "#EA6C73" --
 theme.border_width                              = dpi(3)
-theme.border_normal                             = theme.fg_focus --
+theme.border_normal                             = theme.bg_normal --
 theme.border_focus                              = theme.bg_focus --
-theme.taglist_fg_focus                          = theme.fg_normal --
+theme.taglist_fg_focus                          = theme.fg_focus --
 theme.tasklist_bg_normal                        = theme.bg_normal --
-theme.tasklist_fg_focus                         = theme.fg_normal --
+theme.tasklist_fg_focus                         = theme.fg_focus --
 
-theme.yellow                                    = "#f9e2af"
-theme.purple                                    = "#cba6f7"
-theme.red                                       = "#f38ba8"
-theme.green                                     = "#a6e3a1"
-theme.blue                                      = "#89b4fa"
-theme.teal                                      = "#94e2d5"
+theme.yellow                                    = "#F9AF4F"
+theme.purple                                    = "#705B8B"
+theme.red                                       = "#EA6C73"
+theme.green                                     = "#91B362"
+theme.blue                                      = "#53BDFA"
+theme.teal                                      = "#90E1C6"
 
 -- theme.fg_normal                                 = "#FFFFFF"
 -- theme.fg_focus                                  = "#0099CC"
@@ -125,7 +125,7 @@ local markup = lain.util.markup
 local space3 = markup.font("Roboto 3", " ")
 
 -- Clock
-local mytextclock = wibox.widget.textclock(markup(theme.purple, space3 .. "%H:%M" .. markup.font(theme.font, " ")))
+local mytextclock = wibox.widget.textclock(markup(theme.yellow, space3 .. "%H:%M" .. markup.font(theme.font, " ")))
 mytextclock.font = theme.font
 -- local clock_icon = wibox.widget.imagebox(theme.clock)
 -- local clockbg = wibox.container.background(mytextclock, theme.bg_focus, gears.shape.rectangle)
@@ -309,7 +309,7 @@ lockbutton = wibox.container.margin(lockbutton, dpi(0), dpi(8), dpi(8), dpi(8))
 lockbutton:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/misc/dm-logout.sh') end )
 
 -- Caffeinate
-caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.fontfg("Ubuntu Mono 20", theme.yellow, stdout)) end )
+caffeine_widget, caffeine_timer = awful.widget.watch([[ bash -c '~/.config/awesome/caffe_watch.sh' ]], 60, function(widget, stdout) widget:set_markup(markup.fontfg("Ubuntu Mono 20", theme.purple, stdout)) end )
 caffeine_widget:connect_signal("button::press", function() awful.spawn.with_shell('~/.config/awesome/caffe_toggle.sh') end )
 -- caffeine_widget = wibox.container.background(caffeine_widget, theme.bg_focus, gears.shape.rectangle)
 caffeine_widget = wibox.container.margin(caffeine_widget, dpi(0), dpi(0), dpi(0), dpi(0))
@@ -351,7 +351,7 @@ function theme.at_screen_connect(s)
     if type(wallpaper) == "function" then
         wallpaper = wallpaper(s)
     end
-    gears.wallpaper.maximized(wallpaper, s, true)
+    gears.wallpaper.maximized(wallpaper, s, false)
 
     -- Tags
     awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])

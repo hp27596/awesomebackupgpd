@@ -221,7 +221,7 @@ globalkeys = my_table.join(
     -- awful.key({ modkey }, "r", function () awful.spawn.with_shell("~/.config/misc/dm-frecency") end,
     --   {description = "Run Program Launcher", group = "hotkeys"}),
 
-    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show combi -theme '~/.config/rofi/launchers/type-4/style-1.rasi'") end,
+    awful.key({ modkey }, "r", function () awful.spawn.with_shell("rofi -show combi -theme '~/.config/rofi/launchers/type-4/style-3.rasi'") end,
       {description = "Run Program Launcher", group = "hotkeys"}),
 
     awful.key({ modkey }, "t", function () awful.spawn.with_shell("nemo") end,

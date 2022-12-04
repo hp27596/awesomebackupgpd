@@ -382,6 +382,7 @@
 /home/hp/Music/FLACs/13 - Nothing Else Matters (feat. Caroline Baran).flac
 /home/hp/Music/FLACs/11 - idontwannabeyouanymore.flac
 /home/hp/Music/FLACs/03 - Mr. Blue Sky (feat. Allison Young).flac
+/home/hp/Music/FLACs/Senorita - Shawn Mendes_ Camila Cabello.flac
 /home/hp/Music/FLACs/Cheap Thrills - Sia.flac
 /home/hp/Music/Coming Home Pt II - Skylar Grey.mp3
 /home/hp/Music/FLACs/Coming Home Part II_ - Skylar Grey.flac
