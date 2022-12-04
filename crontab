@@ -1,0 +1,2 @@
+@reboot /home/hp/.config/misc/randommac.sh
+@reboot /usr/bin/intel-undervolt daemon
