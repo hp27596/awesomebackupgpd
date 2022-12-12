@@ -622,7 +622,7 @@ awful.rules.rules = {
       properties = { tag = screen[1].tags[7] } },
 
     { rule_any = { class = { "Thunar", "Nemo" } },
-      properties = { tag = screen[1].tags[7] } },
+      properties = { tag = screen[1].tags[9] } },
 
     { rule_any = { class = { "qBittorrent", "Virt-manager" } },
       properties = { tag = screen[1].tags[9] } },
@@ -766,7 +766,10 @@ function border_adjust(c)
     local max = mouse.screen.selected_tag.layout.name == "max"
     local is_single = #mouse.screen.selected_tag:clients() == 1
     if (max or c.maximized or is_single) then -- no borders if only 1 client visible
-        c.border_width = 0
+        c.border_width = 0 -- Do this for no borders.
+
+        -- c.border_width = beautiful.border_width
+        -- c.border_color = beautiful.border_focus
     elseif #awful.screen.focused().clients > 1 then
         c.border_width = beautiful.border_width
         c.border_color = beautiful.border_focus
@@ -775,6 +778,7 @@ end
 
 client.connect_signal("focus", border_adjust)
 client.connect_signal("property::maximized", border_adjust)
+
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 client.connect_signal("property::minimized", function(c)

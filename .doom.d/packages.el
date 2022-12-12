@@ -22,6 +22,7 @@
 ;; (package! php-cs-fixer)
 ;; (package! phpactor)
 ;; (package! sublimity)
+(package! yascroll)
 (package! rg)
 (package! demap)
 (package! ox-hugo)

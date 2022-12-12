@@ -12,6 +12,7 @@
   (global-tree-sitter-mode)
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
+
 ;; pico8
 ;; (add-to-list 'load-path "~/.doom.d/pico8/")
 ;; (require 'pico8-mode)
@@ -185,7 +186,9 @@
 ;; beacon scrolling
 (beacon-mode 1)
 ;; buffer scroll bar on the right for easier navigation and knowing where in the document the cursor is
-(scroll-bar-mode 1)
+(scroll-bar-mode 0)
+(menu-bar-mode 0)
+(global-yascroll-bar-mode 1)
 ;; enable word-wrap
 (+global-word-wrap-mode +1)
 ;; (adaptive-wrap-prefix-mode t)
@@ -322,8 +325,19 @@
                         `(org-level-6 ((t (:foreground "#FFA500" :weight normal))))
                         `(org-level-7 ((t (:foreground "#53BDFA" :weight normal))))
                         `(org-level-8 ((t (:foreground "#90E1C6" :weight normal))))
-                        ;; `(font-lock-comment-face ((t (:foreground "#D2A6FF"))))
-                        `(org-level-3 ((t (:foreground "orange" :weight bold)))))
+                        `(company-box-selection ((t (:background "#22252A"))))
+                        ;; `(hl-line ((t (:background "#000"))))
+                        ;; `(treemacs-window-foreground-color ((t (:background "#000"))))
+                        ;; `(treemacs-window-background-color ((t (:background "#FFF"))))
+                        `(org-level-3 ((t (:foreground "#E6B450" :weight bold)))))
+
+(defun my-remap-hl-line ()
+  "Remap hl-line face."
+  (face-remap-add-relative 'hl-line `(:background "#B3B1AD" :foreground "#000")))
+
+(with-eval-after-load 'treemacs
+  (add-hook 'treemacs-mode-hook #'my-remap-hl-line))
+
 (setq rainbow-mode 1)
 
 

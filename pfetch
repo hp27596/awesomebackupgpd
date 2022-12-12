@@ -111,7 +111,8 @@ get_title() {
     # value on invocation.
     # shellcheck disable=SC2039
     hostname=${HOSTNAME:-${hostname:-$(hostname)}}
-	ipaddr=$(ip addr show wlan0 | awk '$1 == "inet" {gsub(/\/.*$/, "", $2); print $2}')
+	itf=$(iw dev | awk '$1=="Interface"{print $2}')
+	ipaddr=$(ip addr show $itf | awk '$1 == "inet" {gsub(/\/.*$/, "", $2); print $2}')
 
     log "[3${PF_COL3:-1}m${user}${c7}@[3${PF_COL3:-1}m${hostname}${c7} - ${ipaddr}" " " >&6
 }

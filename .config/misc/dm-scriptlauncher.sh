@@ -11,6 +11,7 @@ declare -a options=(
     "Connect to Sony XM4 bluetooth headphone - sonyxm4.sh"
     "Restart Emacs - resemacs.sh"
     "Restart Nextcloud Daemon - restartnextcloud.sh"
+    "Spongebob Case - dm-spongebob.sh"
     "Backup Awesome Dotfiles (Term) - awesomebu.sh"
     # "Cpu turbo toggle - dm-turbo.sh"
     "Login Portal/Network Check - networkcheck.sh"
