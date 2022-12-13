@@ -12,7 +12,7 @@ xcalib ~/.config/misc/LT7911D.icm &
 
 #starting utility applications at boot time
 # xautolock -time 10 -locker 'slock' -detectsleep -killtime 12 -killer "systemctl suspend" &
-xidlehook --not-when-fullscreen --not-when-audio --timer 600 'slock' '' --timer 900 'systemctl suspend' '' --socket "/tmp/xidlehook.sock" &
+# xidlehook --not-when-fullscreen --not-when-audio --timer 600 'slock' '' --timer 900 'systemctl suspend' '' --socket "/tmp/xidlehook.sock" &
 
 \emacs --daemon &
 nextcloud &
