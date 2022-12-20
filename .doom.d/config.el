@@ -2,8 +2,8 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-(run-at-time (current-time) 600 'recentf-save-list)
-(run-at-time (current-time) 600 'bookmark-save)
+;; (run-at-time (current-time) 600 'recentf-save-list)
+;; (run-at-time (current-time) 600 'bookmark-save)
 
 ;; Better syntax highlighting with tree sitter
 (use-package! tree-sitter
@@ -11,7 +11,6 @@
   (require 'tree-sitter-langs)
   (global-tree-sitter-mode)
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
-
 
 ;; pico8
 ;; (add-to-list 'load-path "~/.doom.d/pico8/")
@@ -111,33 +110,6 @@
 (define-key evil-normal-state-map (kbd "M-]") 'outline-next-heading)
 (define-key evil-normal-state-map (kbd "M-[") 'outline-previous-heading)
 
-
-;; ;; sublimity minimap.
-;; (require 'sublimity)
-;; (require 'sublimity-map)
-;; (require 'sublimity-attractive)
-;; ;; (require 'sublimity-scroll)
-;; (sublimity-map-set-delay nil)
-;; (sublimity-mode)
-;; ;; workaround to always show minimap
-;; (defun always-show-map ()(interactive)(add-hook 'post-command-hook #'sublimity-map-show))
-;; ;; workaround to show minimap, since I've exhausted all other options. The minimap package doesn't play well with org mode, and sublime minimap works with a bunch of caveats. package hasn't been updated in 2 years and it sucks, but what can you do. waiting for better minimap support on ORG mode
-;; (define-key evil-normal-state-map (kbd "M-1") #'(lambda ()(interactive)(+workspace/switch-to-0)(always-show-map)))
-
-;; failed tries. sits here for reference for a while
-;; (defadvice doom/load-session (after doom-load-session activate)(always-show-map))
-;; (defadvice doom/quickload-session (after doom-load-session activate)(always-show-map))
-;; (eval-after-load 'sublimity--post-command #'always-show-map)
-;; (add-hook 'sublimity-map-setup-hook #'visual-fill-column-mode)
-;; (defadvice +workspace/switch-to (after +workspace/switch-to-after activate)(run-hooks sublimity-mode-hook))
-;; (defadvice next-line (after next-line-after activate)(sublimity-map-show))
-;; (defadvice previous-line (after previous-line-after activate)(sublimity-map-show))
-;; (defadvice evil-next-line (after evil-next-line-after activate)(sublimity-map-show))
-;; (defadvice evil-previous-line (after evil-previous-line-after activate)(sublimity-map-show))
-;; (defadvice evil-forward-char (after evil-forward-char-after activate)(sublimity-map-show))
-;; (defadvice evil-backward-char (after evil-backward-char-after activate)(sublimity-map-show))
-
-
 ;; Prompt for buffers to open after split
 (setq evil-vsplit-window-right t
       evil-split-window-below t)
@@ -155,15 +127,20 @@
 ;; (add-hook 'org-mode-hook #'(org-indent-mode nil))
 ;; (minimap-mode)
 ;; treemacs
-(+treemacs/toggle)
+(treemacs-mode)
 (setq treemacs-sorting 'alphabetic-case-insensitive-desc)
 (setq treemacs-width 25)
-(treemacs-follow-mode)
-(treemacs-tag-follow-mode)
+;; (treemacs-follow-mode)
+;; (treemacs-tag-follow-mode)
 (defun ide-mode ()(interactive)(+treemacs/toggle)(demap-toggle)(evil-window-next nil))
 (global-set-key (kbd "<f8>") 'ide-mode)
 (global-set-key (kbd "<f6>") #'(lambda ()(interactive)(+treemacs/toggle)))
 (global-set-key (kbd "<f7>") 'demap-toggle)
+(global-set-key (kbd "<f9>") #'+vterm/toggle)
+(use-package vterm)
+(define-key vterm-mode-map (kbd "<f9>") #'+vterm/toggle)
+(setq vterm-kill-buffer-on-exit t)
+
 ;; dired
 (define-key dired-mode-map (kbd "M-i") 'dired-create-empty-file)
 ;; scroll margin
@@ -174,7 +151,6 @@
 (map! :leader
       :prefix "i"
       :desc "emphasize selected text" "z" #'org-emphasize)
-
 
 
 ;; Custom Set Variables
@@ -188,7 +164,7 @@
 ;; buffer scroll bar on the right for easier navigation and knowing where in the document the cursor is
 (scroll-bar-mode 0)
 (menu-bar-mode 0)
-(global-yascroll-bar-mode 1)
+;; (global-yascroll-bar-mode 1)
 ;; enable word-wrap
 (+global-word-wrap-mode +1)
 ;; (adaptive-wrap-prefix-mode t)
@@ -196,6 +172,7 @@
 (setq vterm-shell '/usr/bin/zsh)
 
 ;; org2blog setup
+(use-package org2blog)
 (require 'org2blog)
 (add-hook 'org-mode-hook 'org2blog/wp-mode)
 (require 'auth-source)
@@ -224,7 +201,31 @@
 ;; open blog post after publish
 (setq org2blog/wp-show-post-in-browser 'show)
 
+;; (use-package irony-eldoc)
+;; ;; (use-package irony-mode)
+;; (use-package platformio-mode)
+;; ;; edit ino files with adruino mode.
+;; (add-to-list 'auto-mode-alist '("\\.ino$" . arduino-mode))
+;; ;; Enable irony for all c++ files, and platformio-mode only
+;; ;; when needed (platformio.ini present in project root).
+;; (add-hook 'c++-mode-hook (lambda ()
+;;                         (irony-mode)
+;;                         (irony-eldoc)
+;;                         (platformio-conditionally-enable)))
 
+;; ;; Use irony's completion functions.
+;; (add-hook 'irony-mode-hook
+;;         (lambda ()
+;;         (define-key irony-mode-map [remap completion-at-point]
+;;         'irony-completion-at-point-async)
+
+;;         (define-key irony-mode-map [remap complete-symbol]
+;;         'irony-completion-at-point-async)
+
+;;         (irony-cdb-autosetup-compile-options)))
+
+(add-hook 'c++-mode-hook #'lsp-deferred)
+(add-hook 'c-mode-hook #'lsp-deferred)
 
 ;; doom emacs dashboard setup
 (use-package dashboard
@@ -325,10 +326,7 @@
                         `(org-level-6 ((t (:foreground "#FFA500" :weight normal))))
                         `(org-level-7 ((t (:foreground "#53BDFA" :weight normal))))
                         `(org-level-8 ((t (:foreground "#90E1C6" :weight normal))))
-                        `(company-box-selection ((t (:background "#22252A"))))
-                        ;; `(hl-line ((t (:background "#000"))))
-                        ;; `(treemacs-window-foreground-color ((t (:background "#000"))))
-                        ;; `(treemacs-window-background-color ((t (:background "#FFF"))))
+                        `(company-tooltip-selection ((t (:background "#000"))))
                         `(org-level-3 ((t (:foreground "#E6B450" :weight bold)))))
 
 (defun my-remap-hl-line ()
@@ -337,8 +335,6 @@
 
 (with-eval-after-load 'treemacs
   (add-hook 'treemacs-mode-hook #'my-remap-hl-line))
-
-(setq rainbow-mode 1)
 
 
 ;; This determines the style of line numbers in effect. If set to `nil', line

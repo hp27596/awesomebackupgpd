@@ -87,7 +87,7 @@ awful.util.terminal = terminal
 awful.util.tagnames = {}
 local names = {"", "", "", "", "", "", "", "", ""}
 local l = awful.layout.suit  -- Just to save some typing: use an alias.
-local layouts = { l.tile, l.max, l.max, l.max, l.max,
+local layouts = { l.tile, l.tile.bottom, l.max, l.max, l.max,
     l.max, l.max, l.max, l.max }
 awful.tag(names, s, layouts)
 
@@ -440,6 +440,10 @@ clientkeys = my_table.join(
             if c.sticky then
                 c.floating = true
                 c.ontop = true
+                c.width = c.screen.geometry.width/3
+                c.x = c.screen.geometry.x+(c.screen.geometry.width*0.65)
+                c.height = c.screen.geometry.height/3
+                c.y = c.screen.geometry.height*0.65
             else
                 c.floating = false
                 c.ontop = false
@@ -476,6 +480,8 @@ clientkeys = my_table.join(
     awful.key({ modkey,           }, "m",
         function ()
             if string.match(mouse.screen.selected_tag.layout.name, 'max') then
+                awful.layout.set(awful.layout.suit.tile.bottom)
+            elseif string.match(mouse.screen.selected_tag.layout.name, 'bottom') then
                 awful.layout.set(awful.layout.suit.tile)
             else
                 awful.layout.set(awful.layout.suit.max)
@@ -784,5 +790,18 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 client.connect_signal("property::minimized", function(c)
     c.minimized = false
 end)
+
+-- tag.connect_signal("property::layout", function(t)
+--     if string.match(mouse.screen.selected_tag.layout.name, 'bottom') then
+--         awful.tag.incmwfact(0.2, t)
+--     end
+-- end)
+
+
+-- tag.connect_signal("manage", function(t)
+--     if string.match(mouse.screen.selected_tag.layout.name, 'bottom') then
+--         awful.tag.incmwfact(0.2, t)
+--     end
+-- end)
 
 awful.spawn.once("sh -c ~/.config/misc/autostart.sh", {})

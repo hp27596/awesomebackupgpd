@@ -225,25 +225,60 @@
 /home/hp/Music/FLACs/Criminal - Britney Spears.flac
 /home/hp/Music/FLACs/Toxic - Britney Spears.flac
 /home/hp/Music/FLACs/havana__camila-cabello__1000kbps____.flac
-/home/hp/Music/FLACs/Something About Us - Daft Punk.flac
 /home/hp/Music/FLACs/01.-Daftendirekt.flac
 /home/hp/Music/FLACs/02.-WDPK 83.7 FM.flac
 /home/hp/Music/FLACs/03.-Revolution 909.flac
 /home/hp/Music/FLACs/04.-Da Funk.flac
+/home/hp/Music/FLACs/05.-Phoenix.flac
+/home/hp/Music/FLACs/06.-Fresh.flac
 /home/hp/Music/FLACs/07.-Around The World.flac
+/home/hp/Music/FLACs/08.-Rollin' & Scratchin'.flac
+/home/hp/Music/FLACs/09.-Teachers.flac
+/home/hp/Music/FLACs/10.-High Fidelity.flac
+/home/hp/Music/FLACs/11.-Rock'n Roll.flac
+/home/hp/Music/FLACs/12.-Oh Yeah.flac
+/home/hp/Music/FLACs/13.-Burnin'.flac
+/home/hp/Music/FLACs/14.-Indo Silver Club.flac
+/home/hp/Music/FLACs/15.-Alive.flac
+/home/hp/Music/FLACs/16.-Funk Ad.flac
+/home/hp/Music/FLACs/01.-One More Time.flac
 /home/hp/Music/FLACs/02.-Aerodynamic.flac
 /home/hp/Music/FLACs/03.-Digital Love.flac
 /home/hp/Music/FLACs/04.-Harder, Better, Faster, Stronger.flac
+/home/hp/Music/FLACs/05.-Crescendolls.flac
+/home/hp/Music/FLACs/06.-Nightvision.flac
+/home/hp/Music/FLACs/07.-Superheroes.flac
+/home/hp/Music/FLACs/08.-High Life.flac
+/home/hp/Music/FLACs/09.-Something About Us.flac
+/home/hp/Music/FLACs/10.-Voyager.flac
+/home/hp/Music/FLACs/11.-Veridis Quo.flac
+/home/hp/Music/FLACs/12.-Short Circuit.flac
+/home/hp/Music/FLACs/13.-Face To Face.flac
+/home/hp/Music/FLACs/14.-Too Long.flac
 /home/hp/Music/FLACs/01.-Human After All.flac
+/home/hp/Music/FLACs/02.-The Prime Time Of Your Life.flac
 /home/hp/Music/FLACs/03.-Robot Rock.flac
 /home/hp/Music/FLACs/04.-Steam Machine.flac
+/home/hp/Music/FLACs/05.-Make Love.flac
+/home/hp/Music/FLACs/06.-The Brainwasher.flac
+/home/hp/Music/FLACs/07.-OnOff.flac
 /home/hp/Music/FLACs/08.-Television Rules The Nation.flac
 /home/hp/Music/FLACs/09.-Technologic.flac
+/home/hp/Music/FLACs/10.-Emotion.flac
 /home/hp/Music/FLACs/03.-The Son Of Flynn.flac
 /home/hp/Music/FLACs/21.-Tron Legacy (End Titles).flac
+/home/hp/Music/FLACs/01.-Give Live Back To Music.flac
+/home/hp/Music/FLACs/02.-The Game Of Love.flac
 /home/hp/Music/FLACs/03.-Giorgio By Moroder.flac
+/home/hp/Music/FLACs/04.-Within.flac
+/home/hp/Music/FLACs/05.-Instant Crush.flac
+/home/hp/Music/FLACs/06.-Lose Yourself To Dance.flac
 /home/hp/Music/FLACs/07.-Touch.flac
 /home/hp/Music/FLACs/08.-Get Lucky.flac
+/home/hp/Music/FLACs/09.-Beyond.flac
+/home/hp/Music/FLACs/10.-Motherboard.flac
+/home/hp/Music/FLACs/11.-Fragments Of Time.flac
+/home/hp/Music/FLACs/12.-Doin' It Right.flac
 /home/hp/Music/FLACs/13.-Contact.flac
 /home/hp/Music/Touch - Daft Punk_ Paul Williams.mp3
 /home/hp/Music/FLACs/Sandstorm - Darude.flac

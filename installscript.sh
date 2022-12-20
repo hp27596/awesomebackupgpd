@@ -134,3 +134,8 @@ sudo cp ~/.cargo/bin/caffeinate /usr/local/bin/
 
 # change shell
 sudo chsh -s /usr/bin/zsh
+
+# udev rules for platformio
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+sudo udevadm control --reload-rules
+sudo udevadm trigger

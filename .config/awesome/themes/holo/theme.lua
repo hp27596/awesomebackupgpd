@@ -97,6 +97,7 @@ theme.tasklist_disable_icon                     = true
 theme.useless_gap                               = dpi(2)
 theme.border_width                              = dpi(1)
 theme.gap_single_client = true
+-- theme.master_width_factor = 0.7
 -- theme.titlebar_close_button_normal              = theme.default_dir.."/titlebar/close_normal.png"
 -- theme.titlebar_close_button_focus               = theme.default_dir.."/titlebar/close_focus.png"
 -- theme.titlebar_minimize_button_normal           = theme.default_dir.."/titlebar/minimize_normal.png"

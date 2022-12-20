@@ -155,6 +155,8 @@ alias wlg='nohup wl-gammactl -g' #wayland extended brightness
 alias xrandrbr='xrandr --output eDP1 --brightness' #set extended brightness
 alias emacs="~/.config/misc/emacs-launch.sh"
 alias yt="yt-dlp"
+alias startidf=". $HOME/esp-idf-v4.4.3/export.sh"
+alias piorun="pio run --target upload && pio device monitor"
 
 hack() { sudo airmon-ng start wlp44s0 && sudo wifite --new-hs --dict /home/hp/wordlists/top1milvn.txt "$@" && sudo airmon-ng stop wlp44s0mon }
 
@@ -193,3 +195,35 @@ unsetopt autocd #this is just a pain in the ass most of the time
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# _fix_cursor() {
+#    echo -ne '\e[5 q'
+# }
+
+# precmd_functions+=(_fix_cursor)
+
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[2 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[6 q'
+  fi
+}
+zle -N zle-keymap-select
+# zle-line-init() {
+#     # zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+#     echo -ne "\e[6 q"
+# }
+# zle -N zle-line-init
+echo -ne '\e[6 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[6 q' ;} # Use beam shape cursor for each new prompt.
+
+# bindkey  "^[[H"   beginning-of-line
+# bindkey  "^[[F"   end-of-line
+# bindkey  "^[[3~"  delete-char
