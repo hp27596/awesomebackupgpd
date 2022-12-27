@@ -28,7 +28,7 @@ cp ./{.ticker.yaml,.tmux.conf,.xprofile,.vimrc,.Xresources,.zshrc,.gtkrc-2.0} ~/
 yay -S intel-media-driver intel-gpu-tools libva-utils xf86-video-intel intel-opencl-runtime intel-undervolt intel-compute-runtime-bin clinfo
 
 # Install essential packages
-yay -S emacs zsh thunar sshfs picom xorg-xinput brightnessctl alsa-utils seahorse polkit-gnome gnome-keyring libgnome-keyring bluez bluez-tools bluez-utils speedtest-cli dunst perl playerctl pnmixer xautolock cmake fzf feh cmus gnome-disk-utility python-pip python iw net-tools htop mpv tk ctags nodejs npm xclip xsel yarn firewalld picom pacman-contrib neovim gvfs gvfs-mtp adobe-source-code-pro-fonts tlp tlp-rdw cargo fuse-exfat onboard acpi acpid blueman tumbler locate man pavucontrol libwacom xf86-input-wacom thermald powertop wget thunar-archive-plugin zip xarchiver
+yay -S emacs-nativecomp zsh thunar sshfs picom xorg-xinput brightnessctl alsa-utils seahorse polkit-gnome gnome-keyring libgnome-keyring bluez bluez-tools bluez-utils speedtest-cli dunst perl playerctl pnmixer xautolock cmake fzf feh cmus gnome-disk-utility python-pip python iw net-tools htop mpv tk ctags nodejs npm xclip xsel yarn firewalld picom pacman-contrib neovim gvfs gvfs-mtp adobe-source-code-pro-fonts tlp tlp-rdw cargo fuse-exfat onboard acpi acpid blueman tumbler locate man pavucontrol libwacom xf86-input-wacom thermald powertop wget thunar-archive-plugin zip xarchiver
 
 # tlp setup
 sudo systemctl enable tlp
@@ -48,7 +48,7 @@ tlp-rdw
 #systemctl --user enable pulseaudio pulseaudio.socket
 
 # Install personal packages
-yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-mod aircrack-ng bully reaver tmux libreoffice-still metasploit cowpatty wireshark-qt termshark macchanger pixiewps john android-sdk-platform-tools nerd-fonts-jetbrains-mono krita xorg-fonts gucharmap qbittorrent rustscan cpupower-gui wine-staging bottom vlc tldr lutris fcitx5 fcitx5-gtk fcitx5-qt fcitx5-unikey kcm-fcitx5 btop clipmenu gparted pass pass-otp sxiv scrcpy qutebrowser trash-cli kdeconnect zathura zathura-pdf-mupdf easytag gnome-power-manager yt-dlp gthumb qalculate-gtk galculator hashcat shotwell kate bettercap pyenv zaproxy audacious rofi qt5ct gnome-themes-extra adwaita-qt5 adwaita-qt6 cpupower lmms neofetch kdenlive newsboat zbar hcxtools hcxdumptool hydra xfce4-settings audacity perl-image-exiftool
+yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-mod aircrack-ng bully reaver tmux libreoffice-still metasploit cowpatty wireshark-qt termshark macchanger pixiewps john android-sdk-platform-tools nerd-fonts-jetbrains-mono krita xorg-fonts gucharmap qbittorrent rustscan cpupower-gui wine-staging bottom vlc tldr lutris fcitx5 fcitx5-gtk fcitx5-qt fcitx5-unikey kcm-fcitx5 btop clipmenu gparted pass pass-otp sxiv scrcpy qutebrowser trash-cli kdeconnect zathura zathura-pdf-mupdf easytag gnome-power-manager yt-dlp gthumb qalculate-gtk galculator hashcat shotwell kate bettercap pyenv zaproxy audacious rofi qt5ct gnome-themes-extra adwaita-qt5 adwaita-qt6 cpupower lmms neofetch kdenlive newsboat zbar hcxtools hcxdumptool hydra xfce4-settings audacity perl-image-exiftool linux-headers
 
 
 # Install AUR packages
@@ -136,6 +136,6 @@ sudo cp ~/.cargo/bin/caffeinate /usr/local/bin/
 sudo chsh -s /usr/bin/zsh
 
 # udev rules for platformio
-curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
-sudo udevadm control --reload-rules
-sudo udevadm trigger
+# curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+# sudo udevadm control --reload-rules
+# sudo udevadm trigger

@@ -158,6 +158,7 @@ alias yt="yt-dlp"
 alias startidf=". $HOME/esp-idf-v4.4.3/export.sh"
 alias piorun="pio run --target upload && pio device monitor"
 
+
 hack() { sudo airmon-ng start wlp44s0 && sudo wifite --new-hs --dict /home/hp/wordlists/top1milvn.txt "$@" && sudo airmon-ng stop wlp44s0mon }
 
 cdl() { cd "$@" && ls; }

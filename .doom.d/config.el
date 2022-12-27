@@ -5,12 +5,21 @@
 ;; (run-at-time (current-time) 600 'recentf-save-list)
 ;; (run-at-time (current-time) 600 'bookmark-save)
 
+
 ;; Better syntax highlighting with tree sitter
 (use-package! tree-sitter
   :config
   (require 'tree-sitter-langs)
   (global-tree-sitter-mode)
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+;; disable smartparens. more trouble than its worth.
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
+(add-hook 'emacs-startup-hook (lambda ()
+        (define-key vertico-map (kbd "M-j") 'vertico-next)
+        (define-key vertico-map (kbd "M-k") 'vertico-previous)
+        (doom/quickload-session)))
 
 ;; pico8
 ;; (add-to-list 'load-path "~/.doom.d/pico8/")
@@ -56,6 +65,8 @@
 (defun evil-prev-five ()(interactive)(evil-previous-line 5))
 (define-key evil-normal-state-map "\S-j" 'evil-next-five)
 (define-key evil-normal-state-map "\S-k" 'evil-prev-five)
+
+
 
 ;; Custom Functions/Keybinds
 ;; unset SPC SPC
@@ -152,6 +163,9 @@
       :prefix "i"
       :desc "emphasize selected text" "z" #'org-emphasize)
 
+(map! :leader
+      :prefix "c"
+      :desc "rename all variable under selected" "r" 'lsp-rename)
 
 ;; Custom Set Variables
 ;; Visual column mode in org documents
@@ -228,24 +242,24 @@
 (add-hook 'c-mode-hook #'lsp-deferred)
 
 ;; doom emacs dashboard setup
-(use-package dashboard
-  :init      ;; tweak dashboard config before loading it
-  (setq dashboard-set-heading-icons t)
-  (setq dashboard-set-file-icons t)
-  ;; (setq dashboard-startup-banner 'logo) ;; use standard emacs logo as banner
-  ;; (setq dashboard-startup-banner "~/.config/doom/doom-emacs-dash.png")  ;; use custom image as banner
-  (setq dashboard-center-content nil) ;; set to 't' for centered content
-  (setq dashboard-items '((recents . 5)
-                          (agenda . 5 )
-                          (bookmarks . 5)
-                          (projects . 5)))
-                          ;; (registers . 5)))
-  :config
-  (dashboard-setup-startup-hook)
-  (dashboard-modify-heading-icons '((recents . "file-text")
-                                    (bookmarks . "book"))))
+;; (use-package dashboard
+;;   :init      ;; tweak dashboard config before loading it
+;;   (setq dashboard-set-heading-icons t)
+;;   (setq dashboard-set-file-icons t)
+;;   ;; (setq dashboard-startup-banner 'logo) ;; use standard emacs logo as banner
+;;   ;; (setq dashboard-startup-banner "~/.config/doom/doom-emacs-dash.png")  ;; use custom image as banner
+;;   (setq dashboard-center-content nil) ;; set to 't' for centered content
+;;   (setq dashboard-items '((recents . 5)
+;;                           (agenda . 5 )
+;;                           (bookmarks . 5)
+;;                           (projects . 5)))
+;;                           ;; (registers . 5)))
+;;   :config
+;;   (dashboard-setup-startup-hook)
+;;   (dashboard-modify-heading-icons '((recents . "file-text")
+;;                                     (bookmarks . "book"))))
 
-(dashboard-refresh-buffer)
+;; (dashboard-refresh-buffer)
 (setq doom-fallback-buffer-name "*dashboard*")
 
 ;; Custom Inserts
@@ -377,3 +391,4 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+

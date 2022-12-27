@@ -11,7 +11,7 @@ elif [[ $chosen == *"2."* ]]; then
     minute=$(echo "" | dmenu -i -p "Enter Minutes:")
     second=$(($minute*60))
     killall caffeinate
-    xset dpms 600 600 $second
+    xset dpms $second $second $second
     caffeinate --timer $second &
     notify-send "Caffeinate enabled for $minute minutes"
 elif [[ $chosen == *"3."* ]]; then
