@@ -69,6 +69,7 @@ sudo usermod -G libvirt -a $USER
 # Post installation
 # refresh font cache
 # fc-cache -fv
+#
 
 # install and move to zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
