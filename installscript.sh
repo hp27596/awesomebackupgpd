@@ -52,7 +52,7 @@ yay -S interception-tools nextcloud-client flameshot ncdu steam ardour fortune-m
 
 
 # Install AUR packages
-yay -S cava cmus-notify google-chrome ncmatrix python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts routersploit-git colorpicker tlpui ttf-iosevka ueberzug xidlehook systemd-boot-pacman-hook pass-update mdk3 hashid pngcheck ranger-git ttf-ubuntu-font-family adwaita-dark lib32-mangohud gtk-theme-material-black
+yay -S cava cmus-notify google-chrome ncmatrix python-pulsectl ticker timeshift-bin noto-fonts-emoji-apple mangohud-git ttf-unifont ttf-font-awesome otf-font-awesome protonvpn goverlay ttf-ubuntu-font-family ttf-ms-fonts routersploit-git colorpicker tlpui ttf-iosevka ueberzug xidlehook systemd-boot-pacman-hook pass-update mdk3 hashid pngcheck ranger-git ttf-ubuntu-font-family adwaita-dark lib32-mangohud gtk-theme-material-black gobuster
 
 # untested autoconfirm solution. used only when I'm sure about all the packages above. Needs testing
 # echo y | LANG=C yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" $PKGNAMe
@@ -139,3 +139,8 @@ sudo chsh -s /usr/bin/zsh
 # curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
 # sudo udevadm control --reload-rules
 # sudo udevadm trigger
+
+# kdeconnect through firewall
+sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/udp
+sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp
+sudo systemctl restart firewalld.service

@@ -12,7 +12,12 @@
 
 # onboard &
 
-xidlehook --not-when-fullscreen --not-when-audio --timer 600 'slock' '' --timer 900 'systemctl suspend' '' --socket "/tmp/xidlehook.sock" &
+xidlehook --not-when-fullscreen --not-when-audio --timer 180 \
+          'brightnessctl -s && brightnessctl set 10%' \
+          'brightnessctl -r' \
+          --timer 600 'slock' '' \
+          --timer 900 'systemctl suspend' '' \
+          --socket "/tmp/xidlehook.sock" &
 
 # xrandr --newmode "800x1280_60.06" 68.500 800 816 832 880 1280 1283 1285 1296 -HSync -VSync
 # xrandr --addmode eDP1 800x1280_60.06

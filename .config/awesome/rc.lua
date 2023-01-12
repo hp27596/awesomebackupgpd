@@ -431,6 +431,7 @@ clientkeys = my_table.join(
     awful.key({ modkey, "Shift" }, "s",
         function (c)
             c.sticky = not c.sticky
+            naughty.notify({ title = "Sticky window toggled" })
         end,
         {description = "toggle sticky", group = "client"}),
 
@@ -448,6 +449,7 @@ clientkeys = my_table.join(
                 c.floating = false
                 c.ontop = false
             end
+            naughty.notify({ title = "Sticky floating window toggled" })
         end,
         {description = "toggle floating and sticky", group = "client"}),
 
@@ -468,12 +470,12 @@ clientkeys = my_table.join(
       {description = "toggle floating", group = "client"}),
     awful.key({ modkey, ctrlkey }, "Return", function (c) c:swap(awful.client.getmaster()) end,
       {description = "move to master", group = "client"}),
-    awful.key({ modkey, "Shift" }, "t",
-        function (c)
-            c.ontop = not c.ontop
-            naughty.notify({ title = "Sticky window toggled" })
-        end,
-      {description = "toggle keep on top", group = "client"}),
+    -- awful.key({ modkey, "Shift" }, "t",
+    --     function (c)
+    --         c.ontop = not c.ontop
+    --         naughty.notify({ title = "Sticky window toggled" })
+    --     end,
+    --   {description = "toggle keep on top", group = "client"}),
     -- awful.key({ modkey,         }, "o", function (c) c:move_to_screen() end,
     --   {description = "move to screen", group = "client"}),
 
@@ -618,7 +620,7 @@ awful.rules.rules = {
     { rule_any = { class = { "Steam", "Lutris" } },
       properties = { tag = screen[1].tags[8] } },
 
-    { rule_any = { name = { "Steam", "Lutris" } },
+    { rule_any = { name = { "Steam", "Lutris", "steam_app_1449850" } },
       properties = { tag = screen[1].tags[8] } },
 
     { rule = { name = "tmux" },
