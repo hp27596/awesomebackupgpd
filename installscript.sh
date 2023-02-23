@@ -28,7 +28,7 @@ cp ./{.ticker.yaml,.tmux.conf,.xprofile,.vimrc,.Xresources,.zshrc,.gtkrc-2.0} ~/
 yay -S intel-media-driver intel-gpu-tools libva-utils xf86-video-intel intel-opencl-runtime intel-undervolt intel-compute-runtime-bin clinfo
 
 # Install essential packages
-yay -S emacs-nativecomp zsh thunar sshfs picom xorg-xinput brightnessctl alsa-utils seahorse polkit-gnome gnome-keyring libgnome-keyring bluez bluez-tools bluez-utils speedtest-cli dunst perl playerctl pnmixer xautolock cmake fzf feh cmus gnome-disk-utility python-pip python iw net-tools htop mpv tk ctags nodejs npm xclip xsel yarn firewalld picom pacman-contrib neovim gvfs gvfs-mtp adobe-source-code-pro-fonts tlp tlp-rdw cargo fuse-exfat onboard acpi acpid blueman tumbler locate man pavucontrol libwacom xf86-input-wacom thermald powertop wget thunar-archive-plugin zip xarchiver
+yay -S emacs-nativecomp zsh thunar sshfs picom xorg-xinput brightnessctl alsa-utils seahorse polkit-gnome gnome-keyring libgnome-keyring bluez bluez-tools bluez-utils speedtest-cli dunst perl playerctl pnmixer xautolock cmake fzf feh cmus gnome-disk-utility python-pip python iw net-tools htop mpv tk ctags nodejs npm xclip xsel yarn firewalld picom pacman-contrib neovim gvfs gvfs-mtp adobe-source-code-pro-fonts tlp tlp-rdw cargo fuse-exfat onboard acpi acpid blueman tumbler locate man pavucontrol libwacom xf86-input-wacom thermald powertop wget thunar-archive-plugin zip xarchiver xorg-xmodmap
 
 # tlp setup
 sudo systemctl enable tlp

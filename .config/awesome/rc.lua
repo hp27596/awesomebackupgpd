@@ -617,10 +617,10 @@ awful.rules.rules = {
     { rule = { class = "Emacs" },
       properties = { tag = screen[1].tags[2] } },
 
-    { rule_any = { class = { "Steam", "Lutris" } },
+    { rule_any = { class = { "Steam", "Lutris", "steam_app*" } },
       properties = { tag = screen[1].tags[8] } },
 
-    { rule_any = { name = { "Steam", "Lutris", "steam_app_1449850" } },
+    { rule_any = { name = { "Steam", "Lutris", "steam_app*" } },
       properties = { tag = screen[1].tags[8] } },
 
     { rule = { name = "tmux" },
