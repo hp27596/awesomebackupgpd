@@ -31,6 +31,7 @@ xfsettingsd &
 # galaxybudsclient &
 # volumeicon &
 nm-applet &
+/usr/lib/kdeconnectd &
 
 sleep 2
 alacritty &

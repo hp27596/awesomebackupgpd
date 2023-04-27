@@ -191,18 +191,25 @@
 (add-hook 'org-mode-hook 'org2blog/wp-mode)
 (require 'auth-source)
 (setq auth-sources '("~/.emacs.d/.local/etc/authinfo.gpg"))
+
+(defun get-otp (otp)
+        (interactive "sOTP: " (message "Hello %s!" otp))
+        (setq passotp otp))
+
 (defun org2blogcreds ()
         (let*   ((creds (nth 0 (auth-source-search :host "blog")))
                 (url (plist-get creds :port))
                 (user (plist-get creds :user))
-                (pass (funcall (plist-get creds :secret)))
+                (pass (concat (funcall (plist-get creds :secret)) passotp))
                 (config `(("blog"
                         :url ,url
                         :username ,user
                         :password ,pass))))
+                (setq fullpass pass)
                 (setq org2blog/wp-blog-alist config)))
 ;; (org2blog-user-login)
-(defun org2blog-creds-and-login()(interactive)(org2blogcreds)(org2blog-user-login))
+(defun org2blog-creds-and-login()
+        (interactive)(call-interactively 'get-otp)(org2blogcreds)(org2blog-user-login))
 (map! :leader
       :prefix "o"
       :desc "Org2blog creds and login" "4" #'org2blog-creds-and-login)

@@ -617,6 +617,9 @@ awful.rules.rules = {
     { rule = { class = "Emacs" },
       properties = { tag = screen[1].tags[2] } },
 
+    { rule = { class = "Spotify" },
+      properties = { tag = screen[1].tags[4] } },
+
     { rule_any = { class = { "Steam", "Lutris", "steam_app*" } },
       properties = { tag = screen[1].tags[8] } },
 
@@ -630,7 +633,7 @@ awful.rules.rules = {
       properties = { tag = screen[1].tags[7] } },
 
     { rule_any = { class = { "Thunar", "Nemo" } },
-      properties = { tag = screen[1].tags[9] } },
+      properties = { tag = screen[1].tags[7] } },
 
     { rule_any = { class = { "qBittorrent", "Virt-manager" } },
       properties = { tag = screen[1].tags[9] } },
